@@ -12,12 +12,11 @@ include '../app/database.php';
 include '../app/classes/config.php';
 
 $username = $_SESSION['name'];
-$user_id = $_SESSION['id'];
 
 $user_information = get_user_information($con, $username);
 $user_jobs = get_user_jobs($con, $username);
-$count_user_jobs = count_user_jobs($con, $user_id);
-$user_jobs_driven_distance = count_user_driven_distance($con, $user_id);
-$user_jobs_earned_money = count_user_earned_money($con, $user_id);
+$count_user_jobs = count_user_jobs($con, $username);
+$user_jobs_driven_distance = count_user_driven_distance($con, $username);
+$user_jobs_earned_money = count_user_earned_money($con, $username);
 
 require '../views/dashboard.view.php';

@@ -19,9 +19,9 @@ $my_date = date("Y-m-d H:i:s");
 // Attempt insert query execution
 $sql_into_users = "INSERT INTO users (username, password, discord, truckersmp, timestamp) VALUES ('$username', '$password', '$discord', '$truckersmp', '$my_date')";
 if (mysqli_query($con, $sql_into_users)) {
-	$sql_into_dashboard = "INSERT INTO dashboard (username, timestamp) VALUES ('$username', '$my_date')";
+	$sql_into_dashboard = "INSERT INTO banks (username, balance, timestamp) VALUES ('$username', '0', '$my_date')";
 	if (mysqli_query($con, $sql_into_dashboard)) {
-		$sql_into_rewards = "INSERT INTO rewards (username, timestamp) VALUES ('$username', '$my_date')";
+		$sql_into_rewards = "INSERT INTO rewards (username, level, timestamp) VALUES ('$username', '0', '$my_date')";
 		if (mysqli_query($con, $sql_into_rewards)) {
             // log
 			header('Location: /public_html/login.php');
