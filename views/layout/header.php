@@ -1,9 +1,11 @@
 <?php
-include_once("../app/classes/config.php");
+include_once '../app/classes/config.php';
+include_once '../app/database.php';
 
 
 if (isset($_SESSION["name"])) {
-  // $dashboard = get_dashboard($con, $username);
+    $username = $_SESSION['name'];
+    $user_information = get_user_information($con, $username);
 }
 
 ?>
@@ -69,11 +71,26 @@ if (isset($_SESSION["name"])) {
 
                 <div class="u-custom-menu u-nav-container">
                     <ul class="u-custom-font u-nav u-text-font u-unstyled u-nav-1">
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-1-base" href="../public/index.php" style="padding: 10px 20px;"><?php echo $_SESSION["name"];?></a>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-1-base" href="../public/index.php" style="padding: 10px 20px;"><?php echo $_SESSION["name"]; ?></a>
                             <div class="u-nav-popup">
                                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
-                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/dashboard.php">Drivers Hub</a>
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/dashboard.php">Dashboard</a>
                                     </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
+                                    </li>
+
+                                    <?php /*
+
+                                    <?php if($user_information["perms"] > 99){
+                                    ?>
+
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="">Admin</a>
+                                    </li>
+
+
+                                    <?php }?>
+                                    */ ?>
+
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../app/classes/logout.php">Logout</a>
                                     </li>
                                 </ul>
@@ -86,7 +103,7 @@ if (isset($_SESSION["name"])) {
                         <div class="u-sidenav-overflow">
                             <div class="u-menu-close"></div>
                             <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="../public/index.php" style="padding: 10px 20px;"><?php echo $_SESSION["name"];?></a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="../public/index.php" style="padding: 10px 20px;"><?php echo $_SESSION["name"]; ?></a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/dashboard.php">Drivers Hub</a>

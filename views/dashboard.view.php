@@ -56,9 +56,8 @@
             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
               <div class="u-container-layout u-container-layout-2">
                 <h2 class="u-custom-font u-font-raleway u-text u-text-1"><?php echo $username ?>'s Profile</h2>
-                <p class="u-custom-font u-font-raleway u-text u-text-2"><?php echo $user_information['information'] ?>
-                </p>
-                <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-radius-21 u-text-hover-palette-4-base u-btn-1">Edit Profile</a>
+                <p class="u-custom-font u-font-raleway u-text u-text-2"><span style="color: <?php echo $user_information['status_color'] ?>;"><?php echo $user_information['information'] ?></span></p>
+                <a href="../public/edit.php" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-radius-21 u-text-hover-palette-4-base u-btn-1">Edit Profile</a>
                 <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-radius-21 u-text-hover-palette-3-base u-btn-2">Jobs</a>
               </div>
             </div>
@@ -67,13 +66,7 @@
       </div>
     </div>
   </section>
-
-
-  <footer class="u-align-center u-clearfix u-custom-color-1 u-footer u-footer" id="sec-d4d2">
-    <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-      <h5 class="u-align-center u-text u-text-1">Copyright 2021 by Van Dijk VTC</h5>
-    </div>
-  </footer>
+  <?php include($footer); ?>
 </body>
 
 </html>

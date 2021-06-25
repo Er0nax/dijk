@@ -18,7 +18,7 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <h1 class="u-text u-text-1">Add</h1>
       <div class="u-form u-form-1">
-        <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+        <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-form-control-hidden u-label">Name</label>
             <input type="text" placeholder="Username" id="name-3b9a" name="username" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
@@ -39,20 +39,11 @@
             <a href="#" class="u-border-1 u-border-hover-palette-4-base u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-custom-font u-font-raleway u-none u-radius-20 u-text-hover-palette-4-base u-btn-1">Submit</a>
             <input type="submit" value="submit" class="u-form-control-hidden">
           </div>
-          <div class="u-form-send-message u-form-send-success"></div>
-          <div class="u-form-send-error u-form-send-message"></div>
-          <input type="hidden" value="" name="recaptchaResponse">
         </form>
       </div>
     </div>
   </section>
-
-
-  <footer class="u-align-center u-clearfix u-custom-color-1 u-footer u-footer" id="sec-d4d2">
-    <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-      <h5 class="u-align-center u-text u-text-1">Copyright 2021 by Van Dijk VTC</h5>
-    </div>
-  </footer>
+  <?php include($footer); ?>
 </body>
 
 </html>

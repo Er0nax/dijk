@@ -31,7 +31,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
 			$_SESSION['id'] = $id;
 			$username = $_SESSION["name"];
             // log
-			header('Location: /public/index.php');
+			header('Location: /public/dashboard.php');
 		} else {
 			// Incorrect password
 ?><script>
