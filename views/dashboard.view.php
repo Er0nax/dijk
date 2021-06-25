@@ -19,25 +19,25 @@
       <div class="u-container-style u-custom-color-1 u-group u-radius-10 u-shape-round u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h5 class="u-custom-font u-font-raleway u-text u-text-1">Role:</h5>
-          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-2">{role}</h5>
+          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-2"><span style="color: <?php echo $user_information['role_color'] ?>;"><?php echo $user_information["role"] ?></span></h5>
           <div class="u-border-1 u-border-custom-color-2 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-3">{balance}</h5>
+          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-3"><?php echo $user_information["balance"] ?></h5>
           <h5 class="u-custom-font u-font-raleway u-text u-text-4">Balance:</h5>
           <div class="u-border-1 u-border-custom-color-2 u-expanded-width u-line u-line-horizontal u-line-2"></div>
           <h5 class="u-custom-font u-font-raleway u-text u-text-5">Level:</h5>
-          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-6">{level}</h5>
+          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-6"><?php echo $user_information["level"] ?></h5>
         </div>
       </div>
       <div class="u-container-style u-custom-color-1 u-group u-radius-10 u-shape-round u-group-2">
         <div class="u-container-layout u-container-layout-2">
           <h5 class="u-custom-font u-font-raleway u-text u-text-7">Jobs done:</h5>
-          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-8">{count_jobs}</h5>
+          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-8"><?php echo $count_user_jobs['total'] ?></h5>
           <div class="u-border-1 u-border-custom-color-2 u-expanded-width u-line u-line-horizontal u-line-3"></div>
-          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-9">{count_distance}</h5>
+          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-9"><?php echo $user_jobs_driven_distance['total'] ?> km</h5>
           <h5 class="u-custom-font u-font-raleway u-text u-text-10">Driven Distance:</h5>
           <div class="u-border-1 u-border-custom-color-2 u-expanded-width u-line u-line-horizontal u-line-4"></div>
           <h5 class="u-custom-font u-font-raleway u-text u-text-11">Earned Money:</h5>
-          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-12">{count_balance}</h5>
+          <h5 class="u-align-right u-custom-font u-font-raleway u-text u-text-12"><?php echo $user_jobs_earned_money['total'] ?> €</h5>
         </div>
       </div>
     </div>
@@ -50,13 +50,13 @@
           <div class="u-layout-row">
             <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-23 u-layout-cell-1">
               <div class="u-container-layout u-valign-middle u-container-layout-1">
-                <div alt="" class="u-border-1 u-border-white u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div>
+                <div style="background-image: url(<?php echo $user_information['user_pb'] ?>);" alt="" class="u-border-1 u-border-white u-image u-image-circle u-image-1" src="" data-image-width="256" data-image-height="256"></div>
               </div>
             </div>
             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
               <div class="u-container-layout u-container-layout-2">
-                <h2 class="u-custom-font u-font-raleway u-text u-text-1">{username}'s Profile</h2>
-                <p class="u-custom-font u-font-raleway u-text u-text-2">{user_infomation}<br>d<br>d<br>d<br>d<br>d<br>d<br>d
+                <h2 class="u-custom-font u-font-raleway u-text u-text-1"><?php echo $username ?>'s Profile</h2>
+                <p class="u-custom-font u-font-raleway u-text u-text-2"><?php echo $user_information['information'] ?>
                 </p>
                 <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-radius-21 u-text-hover-palette-4-base u-btn-1">Edit Profile</a>
                 <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-radius-21 u-text-hover-palette-3-base u-btn-2">Jobs</a>

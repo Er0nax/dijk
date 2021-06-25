@@ -19,15 +19,17 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <h1 class="u-text u-text-1">Login</h1>
       <div class="u-form u-form-1">
-        <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+        <form action="../app/login_register/login.php" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-form-control-hidden u-label">Name</label>
             <input type="text" placeholder="Username" id="name-3b9a" name="username" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
+          <br>
           <div class="u-form-email u-form-group">
             <label for="email-3b9a" class="u-form-control-hidden u-label">Email</label>
-            <input type="email" placeholder="Password" id="email-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="">
+            <input type="password" placeholder="Password" id="email-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="">
           </div>
+          <br>
           <div class="u-align-center u-form-group u-form-submit">
             <a href="#" class="u-border-1 u-border-hover-palette-4-base u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-custom-font u-font-raleway u-none u-radius-20 u-text-hover-palette-4-base u-btn-1">Submit</a>
             <input type="submit" value="submit" class="u-form-control-hidden">

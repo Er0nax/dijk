@@ -1,5 +1,5 @@
 <?php
-include "../app/classes/config.php";
+include "$_SERVER[DOCUMENT_ROOT]/app/classes/config.php";
 
 session_start();
 
@@ -31,7 +31,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
 			$_SESSION['id'] = $id;
 			$username = $_SESSION["name"];
             // log
-			header('Location: /public_html/index.php');
+			header('Location: /public/index.php');
 		} else {
 			// Incorrect password
 ?><script>

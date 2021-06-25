@@ -1,5 +1,5 @@
 <?php
-include "../app/classes/config.php";
+include "$_SERVER[DOCUMENT_ROOT]/app/classes/config.php";
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */

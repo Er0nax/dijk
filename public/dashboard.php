@@ -3,9 +3,21 @@
 // You will be redirected to /views/dashboard.view.php
 // Do not change the link or else it will not work.
 
-include_once '../app/classes/information.php';
-include_once '../app/classes/paths.php';
+session_start();
 
+include '../app/classes/information.php';
+include '../app/classes/paths.php';
 include '../app/logs/write_log.php';
+include '../app/database.php';
+include '../app/classes/config.php';
+
+$username = $_SESSION['name'];
+$user_id = $_SESSION['id'];
+
+$user_information = get_user_information($con, $username);
+$user_jobs = get_user_jobs($con, $username);
+$count_user_jobs = count_user_jobs($con, $user_id);
+$user_jobs_driven_distance = count_user_driven_distance($con, $user_id);
+$user_jobs_earned_money = count_user_earned_money($con, $user_id);
 
 require '../views/dashboard.view.php';
