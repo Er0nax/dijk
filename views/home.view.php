@@ -3,9 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>
-    <?php echo $name; ?> | Home
-  </title>
+  <title><?php echo $name; ?> | Home</title>
   <link rel="stylesheet" href="../views/css/nicepage_home.css" media="screen">
   <link rel="stylesheet" href="../views/css/home.css" media="screen">
   <script class="u-script" type="text/javascript" src="../views/js/jquery_home.js" defer=""></script>
