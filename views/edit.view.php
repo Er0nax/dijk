@@ -6,6 +6,7 @@
   <title><?php echo $name; ?> | Edit</title>
   <link rel="stylesheet" href="../views/css/nicepage_add.css" media="screen">
   <link rel="stylesheet" href="../views/css/add.css" media="screen">
+  <link rel="stylesheet" href="../views/css/button.css" media="screen">
   <script class="u-script" type="text/javascript" src="../views/js/jquery_add.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../views/js/nicepage_add.js.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../views/js/nicepage_home.js" defer=""></script>
@@ -17,9 +18,9 @@
   <?php include($header); ?>
   <section class="u-align-center u-clearfix u-custom-color-2 u-section-1" id="sec-58b6">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h1 class="u-text u-text-1"><?php echo $username ?>'s Profile</h1>
+      <h1 class="u-text u-text-1"><?php echo $all_user_information['username'] ?>'s Profile</h1>
       <div class="u-form u-form-1">
-        <form action="../app/classes/edit_profile.php" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
+        <form action="../app/classes/edit_profile.php<?php if (isset($_GET['user'])) { ?> ?user=<?php echo $_GET['user'] ?> <?php } ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-label">Password:</label>
             <input type="password" value="<?php echo $all_user_information['password'] ?>" id="name-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
@@ -55,7 +56,16 @@
             <input type="submit" value="submit" class="u-form-control-hidden">
           </div>
         </form>
+
+        <?php if (($get_user_perms_edit['perms'] > 99) AND (isset($_GET['user']))) { ?>
+
+          <button class="button_blue" style="vertical-align:middle; width: 200px; background-color: lightgreen;" data-href="../app/classes/approve.php?user=<?php echo $_GET['user'] ?>"><span>Approve</span></button>
+          <button class="button_blue" style="vertical-align:middle; width: 200px; background-color: red;" data-href="../app/classes/unapprove.php?user=<?php echo $_GET['user'] ?>"><span>Unapprove</span></button>
+
+        <?php } ?>
+
       </div>
+      <br>
     </div>
   </section>
   <?php include($footer); ?>

@@ -80,7 +80,8 @@ function get_all_users($con)
     LEFT JOIN jobs ON users.username = jobs.username
     JOIN banks ON users.id=banks.id
     JOIN roles ON users.role_id=roles.id
-    GROUP BY users.id,users.username";
+    GROUP BY users.id,users.username
+    ORDER BY roles.id";
     $all_users = $con->query($query);
 
     return $all_users;
@@ -88,9 +89,9 @@ function get_all_users($con)
 
 function get_profile_information($con, $current_id)
 {
-    $query = "SELECT users.id, users.role_id as 'roleid', users.username, users.status, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.timestamp, roles.id as 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', rewards.level, banks.balance
+    $query = "SELECT users.id, users.role_id AS 'roleid', users.username, users.status, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.timestamp, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', rewards.level, banks.balance, roles.perms AS 'perms'
     FROM users
-    JOIN roles ON users.id=roles.id
+    JOIN roles ON users.role_id=roles.id
     JOIN rewards ON users.id=rewards.id
     JOIN banks ON users.id=banks.id
     WHERE users.id='$current_id'";
@@ -98,4 +99,38 @@ function get_profile_information($con, $current_id)
     $get_profile_information = $result->fetch_assoc();
 
     return $get_profile_information;
+}
+
+
+function all_user_jobs($con, $username)
+{
+    $query = "SELECT jobs.id, jobs.username, jobs.departure, jobs.destination, jobs.truck, jobs.cargo, jobs.income, jobs.distance, jobs.timestamp
+    FROM jobs
+    JOIN users ON jobs.username=users.username
+    WHERE jobs.username='$username'";
+    $all_user_jobs = $con->query($query);
+
+    return $all_user_jobs;
+}
+
+function check_user_perms($con, $username) {
+    $query = "SELECT roles.perms
+    FROM users
+    JOIN roles ON users.role_id=roles.id
+    WHERE users.username='$username'";
+    $result = $con->query($query);
+    $get_user_perms = $result->fetch_assoc();
+
+    return $get_user_perms;
+}
+
+function check_user_perms_edit($con, $loggeduser) {
+    $query = "SELECT roles.perms
+    FROM users
+    JOIN roles ON users.role_id=roles.id
+    WHERE users.username='$loggeduser'";
+    $result = $con->query($query);
+    $get_user_perms_edit = $result->fetch_assoc();
+
+    return $get_user_perms_edit;
 }

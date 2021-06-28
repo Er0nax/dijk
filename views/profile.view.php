@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo $username?>'s Profile</title>
+  <title><?php echo $username ?>'s Profile</title>
   <link rel="stylesheet" href="../views/css/nicepage_profile.css" media="screen">
   <link rel="stylesheet" href="../views/css/profile.css" media="screen">
+  <link rel="stylesheet" href="../views/css/button.css" media="screen">
   <script class="u-script" type="text/javascript" src="../views/js/jquery_profile.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../views/js/nicepage_profile.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../views/js/nicepage_home.js" defer=""></script>
@@ -29,8 +30,11 @@
               <div class="u-container-layout u-container-layout-2">
                 <div class="u-container-style u-custom-color-1 u-expanded-width u-group u-radius-10 u-shape-round u-group-1">
                   <div class="u-container-layout u-container-layout-3">
-                    <h2 class="u-custom-font u-font-raleway u-text u-text-1"><?php echo $get_profile_information['username'] ?>'s Profile</h2>
-                    <p class="u-custom-font u-font-raleway u-text u-text-2"><?php echo $get_profile_information['information'] ?></p>
+                    <h2 class="u-custom-font u-font-raleway u-text u-text-1"><?php echo $get_profile_information['username'] ?>'s Profile 
+                    <?php if($_GET['id'] == $userid) { echo '<button class="button_blue" style="vertical-align:middle" data-href="../public/edit.php"><span>Edit</span></button>'; } ?>
+                    <?php if($get_user_perms['perms'] == 100) { ?><button class="button_red" style="vertical-align:middle" data-href="../public/edit.php?user=<?php echo $get_profile_information['username']; ?>"><span>Edit</span></button> <?php ; } ?>
+                    </h2> 
+                    <p class="u-custom-font u-font-raleway u-text u-text-2"><span style="color: <?php echo $get_profile_information['status_color'] ?>;"><?php echo $get_profile_information['information'] ?></span></p>
                     <div class="u-border-1 u-border-custom-color-3 u-expanded-width u-line u-line-horizontal u-line-1"></div>
                     <h5 class="u-custom-font u-font-raleway u-text u-text-3"><?php echo $get_profile_information['role_name'] ?></h5>
                     <h5 class="u-custom-font u-font-raleway u-text u-text-4">Role:</h5>
@@ -84,81 +88,6 @@
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-23"><?php echo $get_profile_information['truckersmp'] ?></h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-24">Status:</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-25"><?php echo $get_profile_information['status'] ?></h5>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="u-align-center u-clearfix u-custom-color-2 u-section-3" id="sec-0eb7">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-border-1 u-border-custom-color-4 u-line u-line-horizontal u-line-1"></div>
-      <div class="u-form u-form-1">
-        <form action="../app/classes/edit/edit_users.php?id=<?php echo $current_id ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
-          <div class="u-form-group u-form-name">
-            <label for="name-3b9a" class=" u-label">Role ID</label>
-            <input type="text" value="<?php echo $get_profile_information['roleid'] ?>" id="name-3b9a" name="role_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
-          </div>
-          <br>
-          <div class="u-form-group">
-            <label for="email-3b9a" class=" u-label">Discord</label>
-            <input type="text" value="<?php echo $get_profile_information['discord'] ?>" id="email-3b9a" name="discord" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="required">
-          </div>
-          <br>
-          <div class="u-form-group u-form-group-3">
-            <label for="text-c6fa" class=" u-label">Truckers MP</label>
-            <input type="text" value="<?php echo $get_profile_information['truckersmp'] ?>" id="text-c6fa" name="truckersmp" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-3">
-          </div>
-          <br>
-          <div class="u-form-group u-form-group-4">
-            <label for="text-52bf" class=" u-label">Profile Picture</label>
-            <input type="text" value="<?php echo $get_profile_information['user_pb'] ?>" id="text-52bf" name="user_pb" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-4">
-          </div>
-          <br>
-          <div class="u-form-group u-form-group-5">
-            <label for="text-1ddc" class=" u-label">Information</label>
-            <input type="text" value="<?php echo $get_profile_information['information'] ?>" id="text-1ddc" name="information" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-5">
-          </div>
-          <br>
-          <div class="u-align-center u-form-group u-form-submit">
-            <a href="#" class="u-border-1 u-border-custom-color-2 u-border-hover-palette-4-base u-btn u-btn-round u-btn-submit u-button-style u-custom-color-3 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-20 u-text-hover-palette-4-base u-text-white u-btn-1">Edit<br>
-            </a>
-            <br>
-            <input type="submit" value="submit" class="u-form-control-hidden">
-          </div>
-        </form>
-      </div>
-      <div class="u-form u-form-2">
-        <form action="../app/classes/edit/edit_banks.php?id=<?php echo $current_id ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
-          <div class="u-form-group u-form-name">
-            <label for="name-3b9a" class=" u-label">Balance</label>
-            <input type="text" value="<?php echo $get_profile_information['balance'] ?>" id="name-3b9a" name="balance" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle" required="">
-          </div>
-          <br>
-          <div class="u-align-center u-form-group u-form-submit">
-            <a href="#" class="u-border-1 u-border-custom-color-2 u-border-hover-palette-4-base u-btn u-btn-round u-btn-submit u-button-style u-custom-color-3 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-20 u-text-hover-palette-4-base u-text-white u-btn-2">Edit<br>
-            </a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
-          </div>
-        </form>
-      </div>
-      <div class="u-form u-form-3">
-        <form action="../app/classes/edit/edit_rewards.php?id=<?php echo $current_id ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
-          <div class="u-form-group u-form-name">
-            <label for="name-3b9a" class=" u-label">Level</label>
-            <input type="text" value="<?php echo $get_profile_information['level'] ?>" id="name-3b9a" name="level" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle" required="">
-          </div>
-          <br>
-          <div class="u-align-center u-form-group u-form-submit">
-            <a href="#" class="u-border-1 u-border-custom-color-2 u-border-hover-palette-4-base u-btn u-btn-round u-btn-submit u-button-style u-custom-color-3 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-20 u-text-hover-palette-4-base u-text-white u-btn-3">Edit<br>
-            </a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
-          </div>
-        </form>
-      </div>
-      <div class="u-container-style u-custom-color-3 u-group u-radius-10 u-shape-round u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-          <a href="https://nicepage.com/k/exam-html-templates" class="u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-custom-color-3 u-palette-4-base u-radius-20 u-btn-4">verified</a>
-          <a href="https://nicepage.com/k/exam-html-templates" class="u-btn u-btn-round u-button-style u-hover-custom-color-3 u-palette-2-base u-radius-50 u-btn-5">Unverified<br>
-          </a>
         </div>
       </div>
     </div>

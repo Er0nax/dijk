@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo $name; ?> | Users</title>
+  <title>Jobs</title>
   <link rel="stylesheet" href="../views/css/nicepage_users.css" media="screen">
   <link rel="stylesheet" href="../views/css/users.css" media="screen">
   <script class="u-script" type="text/javascript" src="../views/js/jquery_users.js" defer=""></script>
@@ -27,18 +27,18 @@
           </colgroup>
           <tbody class="u-align-center u-table-alt-custom-color-1 u-table-body">
             <tr style="height: 50px;">
-              <td class="u-table-cell">User</td>
-              <td class="u-table-cell">Jobs</td>
-              <td class="u-table-cell">Balance</td>
-              <td class="u-table-cell">Role</td>
+              <td class="u-table-cell">Job ID</td>
+              <td class="u-table-cell">Income</td>
+              <td class="u-table-cell">Distance</td>
+              <td class="u-table-cell">Cargo</td>
             </tr>
 
-            <?php while ($user = $all_users->fetch_assoc()) : ?>
+            <?php while ($job = $all_user_jobs->fetch_assoc()) : ?>
               <tr style="height: 50px;">
-              <td class="u-table-cell"><a href="../public/profile.php?id=<?php echo $user['id'] ?>"><?php echo $user["username"] ?></a></td>
-              <td class="u-table-cell"><?php echo $user["jobs"] ?></td>
-              <td class="u-table-cell"><?php echo $user["balance"] ?> €</td>
-              <td class="u-table-cell"><span style="color: <?php echo $user["rolecolor"] ?>;"><?php echo $user["role"] ?></span></td>
+              <td class="u-table-cell"><a href="../public/jobs.php?id=<?php echo $job["id"] ?>"><?php echo $job["id"] ?></a></td>
+              <td class="u-table-cell"><?php echo $job["income"] ?> €</td>
+              <td class="u-table-cell"><?php echo $job["distance"] ?> km</td>
+              <td class="u-table-cell"><?php echo $job["cargo"] ?></td>
             </tr>
             <?php endwhile; ?>
 

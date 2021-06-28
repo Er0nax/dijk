@@ -74,7 +74,9 @@ if (isset($_SESSION["name"])) {
                         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-1-base" href="../public/index.php" style="padding: 10px 20px;"><?php echo $_SESSION["name"]; ?></a>
                             <div class="u-nav-popup">
                                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
-                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/dashboard.php">Dashboard</a>
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/profile.php">Dashboard</a>
+                                    </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/jobs.php">Jobs</a>
                                     </li>
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
                                     </li>
@@ -106,7 +108,9 @@ if (isset($_SESSION["name"])) {
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="../public/index.php" style="padding: 10px 20px;"><?php echo $_SESSION["name"]; ?></a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
-                                            <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/dashboard.php">Drivers Hub</a>
+                                            <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/profile.php">Dashboard</a>
+                                            </li>
+                                            <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/jobs.php">Jobs</a>
                                             </li>
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../app/classes/logout.php">Logout</a>
                                             </li>
