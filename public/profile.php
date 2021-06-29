@@ -19,6 +19,7 @@ $username = $_SESSION['name'];
 $current_id = $_GET['id']; // get ID from URL
 $userid = $_SESSION['id']; // get ID from session
 $get_user_perms = check_user_perms($con, $username);
+$user_jobs_information = user_jobs_information($con, $current_id);
 
 $get_profile_information = get_profile_information($con, $current_id);
 

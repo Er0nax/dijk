@@ -36,19 +36,19 @@
             <input type="text" value="<?php echo $all_user_information['truckersmp'] ?>" id="name-3b9a" name="truckersmp" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
-          <div class="u-form-email u-form-group">
-            <label for="email-3b9a" class="u-label">Information:</label>
-            <input type="text" value="<?php echo $all_user_information['information'] ?>" id="email-3b9a" name="information" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="">
+          <div class="u-form-group u-form-name">
+          <label for="name-3b9a" class="u-label">Information:</label>
+            <input type="text" value="<?php echo $all_user_information['information'] ?>" id="name-3b9a" name="information" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
-          <div class="u-form-group u-form-group-3">
-            <label for="text-8b2a" class="u-label">Status Color:</label>
-            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="text-8b2a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3">
+          <div class="u-form-group u-form-name">
+          <label for="name-3b9a" class="u-label">Status Color:</label>
+            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="name-3b9a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
           </div>
           <br>
-          <div class="u-form-group u-form-group-3">
-            <label for="text-8b2a" class="u-label">Profile Picture:</label>
-            <input type="text" value="<?php echo $all_user_information['user_pb'] ?>" id="text-8b2a" name="user_pb" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3">
+          <div class="u-form-group u-form-name">
+          <label for="name-3b9a" class="u-label">Profile Picture:</label>
+            <input type="text" value="<?php echo $all_user_information['user_pb'] ?>" id="name-3b9a" name="user_pb" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
           </div>
           <br>
           <div class="u-align-center u-form-group u-form-submit">

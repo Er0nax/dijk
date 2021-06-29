@@ -76,6 +76,8 @@ if (isset($_SESSION["name"])) {
                                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/profile.php">Profile</a>
                                     </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/add_job.php">Add Job</a>
+                                    </li>
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/jobs.php">Jobs</a>
                                     </li>
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
@@ -109,6 +111,8 @@ if (isset($_SESSION["name"])) {
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/profile.php">Profile</a>
+                                            </li>
+                                            <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/add_job.php">Add Job</a>
                                             </li>
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/jobs.php">Jobs</a>
                                             </li>

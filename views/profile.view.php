@@ -62,21 +62,21 @@
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <div class="u-container-style u-custom-color-1 u-group u-radius-10 u-shape-round u-group-1">
         <div class="u-container-layout u-container-layout-1">
-          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-1">Job Statistics</h5>
+          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-1">Total Jobs Statistic</h5>
           <div class="u-border-1 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-2">Jobs:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-3">{total_jobs}</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-3"><?php echo $user_jobs_information['total_jobs'] ?></h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-4">Income:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-5">{total_income}</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-5"><?php echo $user_jobs_information['total_income'] ?> €</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-6">Distance:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-7">{total_distance}</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-7"><?php echo $user_jobs_information['total_distance'] ?> km</h5>
           <div class="u-border-1 u-border-custom-color-3 u-line u-line-horizontal u-line-2"></div>
-          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-8">Average</h5>
+          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-8">Average Job:</h5>
           <div class="u-border-1 u-border-custom-color-3 u-line u-line-horizontal u-line-3"></div>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-9">{average_distance}</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-10">Distance:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-11">Income:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-12">{average_distance}</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-9"><?php echo $user_jobs_information['average_income'] ?> €</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-10">Income:</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-11">Distance:</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-12"><?php echo $user_jobs_information['average_distance'] ?> km</h5>
         </div>
       </div>
       <div class="u-container-style u-custom-color-1 u-group u-radius-10 u-shape-round u-group-2">

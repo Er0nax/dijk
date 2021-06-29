@@ -5,6 +5,11 @@
 
 session_start();
 
-include_once '../app/classes/information.php';
-include_once '../app/classes/paths.php';
+include '../app/classes/information.php';
+include '../app/classes/paths.php';
+include '../app/database.php';
+include '../app/classes/config.php';
+
+$get_news = get_news($con);
+
 require '../views/home.view.php';

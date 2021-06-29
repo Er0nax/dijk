@@ -36,47 +36,50 @@
             <input type="text" value="<?php echo $all_user_information['truckersmp'] ?>" id="name-3b9a" name="truckersmp" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
-          <div class="u-form-group u-form-group-3">
-            <label for="role_id">Role</label>
-            <select name="role_id" id="cars" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
 
-              <?php while ($role = $list_all_roles->fetch_assoc()) : ?>
-
-                <option value="<?php echo $role['id'] ?>"><?php echo $role['name'] ?></option>
-
-              <?php endwhile; ?>
-
-            </select>
+          <div class="u-form-group u-form-select u-form-group-2">
+            <label for="select-ce55" class="u-form-control-hidden u-label"></label>
+            <div class="u-form-select-wrapper">
+              <select id="select-ce55" name="role_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-2">
+                <?php while ($role = $list_all_roles->fetch_assoc()) : ?>
+                  <option value="<?php echo $role['id'] ?>"><?php echo $role['name'] ?></option>
+                <?php endwhile; ?>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                <path fill="currentColor" d="M4 8L0 4h8z"></path>
+              </svg>
+            </div>
           </div>
           <br>
+
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Level</label>
-            <input type="text" value="<?php echo $all_user_information['level'] ?>" id="text-8b2a" name="level" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="">
+            <input type="text" value="<?php echo $all_user_information['level'] ?>" id="text-8b2a" name="level" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Balance</label>
-            <input type="text" value="<?php echo $all_user_information['balance'] ?>" id="text-8b2a" name="balance" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+            <input type="text" value="<?php echo $all_user_information['balance'] ?>" id="text-8b2a" name="balance" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
           </div>
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Custom Status</label>
-            <input type="text" value="<?php echo $all_user_information['status'] ?>" id="text-8b2a" name="status" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+            <input type="text" value="<?php echo $all_user_information['status'] ?>" id="text-8b2a" name="status" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
           </div>
           <br>
           <div class="u-form-email u-form-group">
             <label for="email-3b9a" class="u-label">Information:</label>
-            <input type="text" value="<?php echo $all_user_information['information'] ?>" id="email-3b9a" name="information" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="">
+            <input type="text" value="<?php echo $all_user_information['information'] ?>" id="email-3b9a" name="information" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Status Color:</label>
-            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="text-8b2a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="">
+            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="text-8b2a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Profile Picture:</label>
-            <input type="text" value="<?php echo $all_user_information['user_pb'] ?>" id="text-8b2a" name="user_pb" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="">
+            <input type="text" value="<?php echo $all_user_information['user_pb'] ?>" id="text-8b2a" name="user_pb" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
           <div class="u-align-center u-form-group u-form-submit">

@@ -104,16 +104,16 @@ function get_profile_information($con, $current_id)
 
 function all_user_jobs($con, $username)
 {
-    $query = "SELECT jobs.id, jobs.username, jobs.departure, jobs.destination, jobs.truck, jobs.cargo, jobs.income, jobs.distance, jobs.timestamp
+    $query = "SELECT jobs.id, jobs.income, jobs.distance, jobs.cargo
     FROM jobs
-    JOIN users ON jobs.username=users.username
     WHERE jobs.username='$username'";
     $all_user_jobs = $con->query($query);
 
     return $all_user_jobs;
 }
 
-function check_user_perms($con, $username) {
+function check_user_perms($con, $username)
+{
     $query = "SELECT roles.perms
     FROM users
     JOIN roles ON users.role_id=roles.id
@@ -124,7 +124,8 @@ function check_user_perms($con, $username) {
     return $get_user_perms;
 }
 
-function check_user_perms_edit($con, $loggeduser) {
+function check_user_perms_edit($con, $loggeduser)
+{
     $query = "SELECT roles.perms
     FROM users
     JOIN roles ON users.role_id=roles.id
@@ -135,9 +136,59 @@ function check_user_perms_edit($con, $loggeduser) {
     return $get_user_perms_edit;
 }
 
-function list_all_roles($con) {
+function list_all_roles($con)
+{
     $query = "SELECT roles.id, roles.name FROM roles";
     $list_all_roles = $con->query($query);
 
     return $list_all_roles;
+}
+
+function get_all_trucks($con)
+{
+    $query = "SELECT trucks.id, trucks.truck FROM trucks";
+    $get_all_trucks = $con->query($query);
+
+    return $get_all_trucks;
+}
+
+function get_departure_city($con)
+{
+    $query = "SELECT cities.id ,cities.city FROM cities";
+    $get_departure_city = $con->query($query);
+
+    return $get_departure_city;
+}
+
+function get_destination_city($con)
+{
+    $query = "SELECT cities.id ,cities.city FROM cities";
+    $get_destination_city = $con->query($query);
+
+    return $get_destination_city;
+}
+
+function user_jobs_information($con, $current_id)
+{
+    $query = "SELECT Count(jobs.id) AS 'total_jobs', SUM(jobs.income) AS 'total_income', SUM(jobs.distance) AS 'total_distance', ROUND(AVG(jobs.income), 0) AS 'average_income', ROUND(AVG(jobs.distance), 0) AS 'average_distance'
+    FROM jobs
+    WHERE jobs.user_id='$current_id'";
+    $result = $con->query($query);
+    $user_jobs_information = $result->fetch_assoc();
+
+    return $user_jobs_information;
+}
+
+
+function get_news($con)
+{
+    $query = "SELECT news.username, news.title, news.body, roles.color, users.id AS 'user_id'
+    FROM news
+    JOIN users ON news.username=users.username
+    JOIN roles ON users.role_id=roles.id
+    ORDER BY news.timestamp DESC";
+    $result = $con->query($query);
+    $get_news = $result->fetch_assoc();
+
+    return $get_news;
 }

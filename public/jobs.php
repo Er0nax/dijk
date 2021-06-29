@@ -14,8 +14,4 @@ include '../app/classes/config.php';
 $username = $_SESSION['name'];
 $all_user_jobs = all_user_jobs($con, $username);
 
-if (isset($_GET['id'])) {
-    require '../views/job-information.view.php';
-} else {
-    require '../views/jobs.view.php';
-}
+require '../views/jobs.view.php';
