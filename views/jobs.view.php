@@ -35,11 +35,11 @@
 
             <?php while ($job = $all_user_jobs->fetch_assoc()) : ?>
               <tr style="height: 50px;">
-              <td class="u-table-cell"><a href="../public/jobs.php?id=<?php echo $job["id"] ?>"><?php echo $job["id"] ?></a></td>
-              <td class="u-table-cell"><?php echo $job["income"] ?> €</td>
-              <td class="u-table-cell"><?php echo $job["distance"] ?> km</td>
-              <td class="u-table-cell"><?php echo $job["cargo"] ?></td>
-            </tr>
+                <td class="u-table-cell"><a href="../public/jobs.php?id=<?php echo $job["id"] ?>"><?php echo $job["id"] ?></a></td>
+                <td class="u-table-cell"><?php echo $job["income"] ?> €</td>
+                <td class="u-table-cell"><?php echo $job["distance"] ?> km</td>
+                <td class="u-table-cell"><?php echo $job["cargo"] ?></td>
+              </tr>
             <?php endwhile; ?>
 
           </tbody>

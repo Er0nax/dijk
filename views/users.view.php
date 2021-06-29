@@ -35,11 +35,11 @@
 
             <?php while ($user = $all_users->fetch_assoc()) : ?>
               <tr style="height: 50px;">
-              <td class="u-table-cell"><a href="../public/profile.php?id=<?php echo $user['id'] ?>"><?php echo $user["username"] ?></a></td>
-              <td class="u-table-cell"><?php echo $user["jobs"] ?></td>
-              <td class="u-table-cell"><?php echo $user["balance"] ?> €</td>
-              <td class="u-table-cell"><span style="color: <?php echo $user["rolecolor"] ?>;"><?php echo $user["role"] ?></span></td>
-            </tr>
+                <td class="u-table-cell"><a href="../public/profile.php?id=<?php echo $user['id'] ?>"><?php echo $user["username"] ?></a></td>
+                <td class="u-table-cell"><?php echo $user["jobs"] ?></td>
+                <td class="u-table-cell"><?php echo $user["balance"] ?> €</td>
+                <td class="u-table-cell"><span style="color: <?php echo $user["rolecolor"] ?>;"><?php echo $user["role"] ?></span></td>
+              </tr>
             <?php endwhile; ?>
 
           </tbody>
