@@ -8,9 +8,9 @@ if ($con === false) {
 }
 
 // get input 
-$username = $_GET['user'];
+$id = $_GET['id'];
 
-$sql = "UPDATE users SET status='Not Verified' WHERE username='$username'";
+$sql = "UPDATE users SET status='Not Verified' WHERE id='$id'";
 if (mysqli_query($con, $sql)) {
     // log
     header('Location: /public/users.php');

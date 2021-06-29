@@ -20,10 +20,10 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <h1 class="u-text u-text-1"><?php echo $all_user_information['username'] ?>'s Profile</h1>
       <div class="u-form u-form-1">
-        <form action="../app/classes/edit.php" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
+        <form action="../app/classes/staff_edit.php?id=<?php echo $all_user_information['id'] ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-label">Password:</label>
-            <input type="password" value="<?php echo $all_user_information['password'] ?>" id="name-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
+            <input type="password" value="<?php echo $all_user_information['password'] ?>" id="name-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 100) { ?> disabled <?php } ?>>
           </div>
           <br>
           <div class="u-form-group u-form-name">
@@ -36,6 +36,34 @@
             <input type="text" value="<?php echo $all_user_information['truckersmp'] ?>" id="name-3b9a" name="truckersmp" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
+          <div class="u-form-group u-form-group-3">
+            <label for="role_id">Role</label>
+            <select name="role_id" id="cars" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+
+              <?php while ($role = $list_all_roles->fetch_assoc()) : ?>
+
+                <option value="<?php echo $role['id'] ?>"><?php echo $role['name'] ?></option>
+
+              <?php endwhile; ?>
+
+            </select>
+          </div>
+          <br>
+          <div class="u-form-group u-form-group-3">
+            <label for="text-8b2a" class="u-label">Level</label>
+            <input type="text" value="<?php echo $all_user_information['level'] ?>" id="text-8b2a" name="level" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="">
+          </div>
+          <br>
+          <div class="u-form-group u-form-group-3">
+            <label for="text-8b2a" class="u-label">Balance</label>
+            <input type="text" value="<?php echo $all_user_information['balance'] ?>" id="text-8b2a" name="balance" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+          </div>
+          <br>
+          <div class="u-form-group u-form-group-3">
+            <label for="text-8b2a" class="u-label">Custom Status</label>
+            <input type="text" value="<?php echo $all_user_information['status'] ?>" id="text-8b2a" name="status" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+          </div>
+          <br>
           <div class="u-form-email u-form-group">
             <label for="email-3b9a" class="u-label">Information:</label>
             <input type="text" value="<?php echo $all_user_information['information'] ?>" id="email-3b9a" name="information" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="">
@@ -43,12 +71,12 @@
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Status Color:</label>
-            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="text-8b2a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3">
+            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="text-8b2a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="">
           </div>
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Profile Picture:</label>
-            <input type="text" value="<?php echo $all_user_information['user_pb'] ?>" id="text-8b2a" name="user_pb" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3">
+            <input type="text" value="<?php echo $all_user_information['user_pb'] ?>" id="text-8b2a" name="user_pb" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-3" required="">
           </div>
           <br>
           <div class="u-align-center u-form-group u-form-submit">
@@ -56,6 +84,12 @@
             <input type="submit" value="submit" class="u-form-control-hidden">
           </div>
         </form>
+
+        <?php if ($get_user_perms_edit['perms'] > 100) { ?>
+          <button class="button_blue" style="vertical-align:middle; width: 200px; background-color: lightgreen;" data-href="../app/classes/approve.php?id=<?php echo $_GET['id'] ?>"><span>Approve</span></button>
+          <button class="button_blue" style="vertical-align:middle; width: 200px; background-color: red;" data-href="../app/classes/unapprove.php?id=<?php echo $_GET['id'] ?>"><span>Unapprove</span></button>
+        <?php } ?>
+
       </div>
       <br>
     </div>

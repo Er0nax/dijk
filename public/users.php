@@ -8,7 +8,6 @@ session_start();
 
 include '../app/classes/information.php';
 include '../app/classes/paths.php';
-include '../app/logs/write_log.php';
 include '../app/database.php';
 include '../app/classes/config.php';
 

@@ -7,5 +7,4 @@ session_start();
 
 include_once '../app/classes/information.php';
 include_once '../app/classes/paths.php';
-include '../app/logs/write_log.php';
 require '../views/home.view.php';

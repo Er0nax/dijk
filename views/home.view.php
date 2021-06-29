@@ -24,9 +24,9 @@
           </div>
         </div>
       </div>
-      <a href="https://nicepage.com/k/presentation-html-templates" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">TruckersMP</a>
-      <a href="https://nicepage.com/k/presentation-html-templates" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Meet the Team</a>
-      <a href="https://nicepage.com/k/presentation-html-templates" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Discord<br>
+      <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">TruckersMP</a>
+      <a href="../public/users.php" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Meet the Team</a>
+      <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Discord<br>
       </a>
     </div>
   </section>

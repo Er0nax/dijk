@@ -10,11 +10,11 @@ if (session_status() == PHP_SESSION_NONE) {
 function get_user_information($con, $username)
 {
 
-    $query = "SELECT users.id, users.username, users.user_pb, users.information, users.status_color, banks.balance AS 'balance', roles.name AS 'role', rewards.`level` AS 'level', roles.color AS 'role_color', roles.perms
+    $query = "SELECT users.id, users.username, users.user_pb, users.information, users.status_color, banks.balance AS 'balance', roles.name AS 'role', levels.`level` AS 'level', roles.color AS 'role_color', roles.perms
               FROM users
               JOIN banks ON users.id=banks.id
               JOIN roles ON users.role_id=roles.id
-              JOIN rewards ON users.id=rewards.id
+              JOIN levels ON users.id=levels.id
               WHERE users.username='$username'";
     $result = $con->query($query);
     $user_information = $result->fetch_assoc();
@@ -22,10 +22,10 @@ function get_user_information($con, $username)
     return $user_information;
 }
 
-function get_all_user_information($con, $username)
+function get_all_user_information($con, $id)
 {
 
-    $query = "SELECT * FROM users WHERE users.username='$username'";
+    $query = "SELECT * FROM users WHERE users.id='$id'";
     $result = $con->query($query);
     $all_user_information = $result->fetch_assoc();
 
@@ -81,7 +81,7 @@ function get_all_users($con)
     JOIN banks ON users.id=banks.id
     JOIN roles ON users.role_id=roles.id
     GROUP BY users.id,users.username
-    ORDER BY roles.id";
+    ORDER BY roles.perms DESC";
     $all_users = $con->query($query);
 
     return $all_users;
@@ -89,10 +89,10 @@ function get_all_users($con)
 
 function get_profile_information($con, $current_id)
 {
-    $query = "SELECT users.id, users.role_id AS 'roleid', users.username, users.status, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.timestamp, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', rewards.level, banks.balance, roles.perms AS 'perms'
+    $query = "SELECT users.id, users.password, users.role_id AS 'roleid', users.username, users.status, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.timestamp, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', levels.level, banks.balance, roles.perms AS 'perms'
     FROM users
     JOIN roles ON users.role_id=roles.id
-    JOIN rewards ON users.id=rewards.id
+    JOIN levels ON users.id=levels.id
     JOIN banks ON users.id=banks.id
     WHERE users.id='$current_id'";
     $result = $con->query($query);
@@ -133,4 +133,11 @@ function check_user_perms_edit($con, $loggeduser) {
     $get_user_perms_edit = $result->fetch_assoc();
 
     return $get_user_perms_edit;
+}
+
+function list_all_roles($con) {
+    $query = "SELECT roles.id, roles.name FROM roles";
+    $list_all_roles = $con->query($query);
+
+    return $list_all_roles;
 }

@@ -3,30 +3,12 @@ include "$_SERVER[DOCUMENT_ROOT]/app/classes/config.php";
 include "$_SERVER[DOCUMENT_ROOT]/app/database.php";
 
 session_start();
-$username = $_SESSION['name'];
-$get_user_perms = check_user_perms($con, $username);
 
 if ($con === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-// get input 
-
-if (isset($_GET['user'])) {
-
-    // check perms first
-    if ($get_user_perms['perms'] > 99) {
-
-        $editeduser = $_GET['user'];
-    } else {
-        header('Location: /public/profile.php');
-        exit;
-    }
-} else {
-    $editeduser = $_SESSION['name'];
-}
-
-
+$editeduser = $_SESSION['name'];
 $password = mysqli_real_escape_string($con, $_REQUEST['password']);
 $discord = mysqli_real_escape_string($con, $_REQUEST['discord']);
 $truckersmp = mysqli_real_escape_string($con, $_REQUEST['truckersmp']);

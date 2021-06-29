@@ -21,13 +21,13 @@ $sql_into_users = "INSERT INTO users (username, password, discord, truckersmp, t
 if (mysqli_query($con, $sql_into_users)) {
 	$sql_into_dashboard = "INSERT INTO banks (username, balance, timestamp) VALUES ('$username', '0', '$my_date')";
 	if (mysqli_query($con, $sql_into_dashboard)) {
-		$sql_into_rewards = "INSERT INTO rewards (username, level, timestamp) VALUES ('$username', '0', '$my_date')";
-		if (mysqli_query($con, $sql_into_rewards)) {
+		$sql_into_levels = "INSERT INTO levels (username, level, timestamp) VALUES ('$username', '0', '$my_date')";
+		if (mysqli_query($con, $sql_into_levels)) {
             // log
 			header('Location: /public/index.php');
 			exit;
 		} else {
-			echo "ERROR: Could not able to execute $sql_into_rewards. " . mysqli_error($con);
+			echo "ERROR: Could not able to execute $sql_into_levels. " . mysqli_error($con);
 		}
 	} else {
 		echo "ERROR: Could not able to execute $sql_into_dashboard. " . mysqli_error($con);

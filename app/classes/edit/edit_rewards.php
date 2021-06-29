@@ -12,7 +12,7 @@ $current_id = $_GET['id'];
 
 $level = mysqli_real_escape_string($con, $_REQUEST['level']);
 
-$sql = "UPDATE rewards SET level='$level' WHERE id='$current_id'";
+$sql = "UPDATE levels SET level='$level' WHERE id='$current_id'";
 if (mysqli_query($con, $sql)) {
     // log
     header('Location: /public/users.php');
