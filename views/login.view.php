@@ -15,7 +15,7 @@
 
 <body class="u-body">
   <?php include($header); ?>
-  <section class="u-align-center u-clearfix u-custom-color-2 u-section-1" id="sec-58b6">
+  <section style="height: 100vh;" class="u-align-center u-clearfix u-custom-color-2 u-section-1" id="sec-58b6">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h1 class="u-text u-text-1">Login</h1>
       <div class="u-form u-form-1">
@@ -27,7 +27,7 @@
           <br>
           <div class="u-form-email u-form-group">
             <label for="email-3b9a" class="u-form-control-hidden u-label">Email</label>
-            <input type="password" placeholder="Password" id="email-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required="">
+            <input type="password" placeholder="Password" id="email-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
           <div class="u-align-center u-form-group u-form-submit">

@@ -81,7 +81,7 @@ function get_all_users($con)
     JOIN banks ON users.id=banks.id
     JOIN roles ON users.role_id=roles.id
     GROUP BY users.id,users.username
-    ORDER BY roles.perms DESC";
+    ORDER BY roles.id";
     $all_users = $con->query($query);
 
     return $all_users;
