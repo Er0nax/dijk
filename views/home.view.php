@@ -19,7 +19,7 @@
           <h3 class="u-custom-font u-font-raleway u-text u-text-1"><?php echo $get_news['title'] ?></h3>
           <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1" data-animation-name="lightSpeedIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction=""></div>
           <h5 class="u-custom-font u-font-raleway u-text u-text-2"><?php echo $get_news['body'] ?></h5>
-          <h6 style="padding-bottom: 20px;" class="u-align-left u-custom-font u-font-raleway u-text u-text-3">by <a href="../public/profile.php?id=<?php echo $get_news['user_id'] ?>" style="color: <?php echo $get_news['color'] ?>;"> <?php echo $get_news['username'] ?></a></h6>        </div>
+          <h6 style="padding-bottom: 20px; text-align: center; color: lightgrey;" class="u-align-left u-custom-font u-font-raleway u-text u-text-3">by <a href="../public/profile.php?id=<?php echo $get_news['user_id'] ?>" style="color: <?php echo $get_news['color'] ?>;"> <?php echo $get_news['username'] ?></a></h6>        </div>
       </div>
       <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">TruckersMP</a>
       <a href="../public/users.php" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Meet the Team</a>

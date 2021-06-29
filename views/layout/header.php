@@ -83,17 +83,11 @@ if (isset($_SESSION["name"])) {
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
                                     </li>
 
-                                    <?php /*
+                                    <?php if ($user_information["perms"] > 70) { ?>
 
-                                    <?php if($user_information["perms"] > 99){
-                                    ?>
-
-                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="">Admin</a>
-                                    </li>
-
-
-                                    <?php }?>
-                                    */ ?>
+                                        <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/add_news.php">Add News</a>
+                                        </li>
+                                    <?php } ?>
 
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../app/classes/logout.php">Logout</a>
                                     </li>
@@ -118,6 +112,13 @@ if (isset($_SESSION["name"])) {
                                             </li>
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
                                             </li>
+
+                                            <?php if ($user_information["perms"] > 70) { ?>
+
+                                                <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/add_news.php">Add News</a>
+                                                </li>
+                                            <?php } ?>
+
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../app/classes/logout.php">Logout</a>
                                             </li>
                                         </ul>
