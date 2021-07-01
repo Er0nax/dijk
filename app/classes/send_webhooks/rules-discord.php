@@ -15,7 +15,7 @@ $hookObject = json_encode([
     /*
      * The image location for the senders image
      */
-    "avatar_url" => "https://pbs.twimg.com/profile_images/972154872261853184/RnOg6UyU_400x400.jpg",
+    "avatar_url" => "https://cdn.discordapp.com/attachments/797004086175203358/859777448451244062/unknown.png",
     /*
      * Whether or not to read the message in Text-to-speech
      */
@@ -47,10 +47,10 @@ $hookObject = json_encode([
             /* A timestamp to be displayed below the embed, IE for when an an article was posted
              * This must be formatted as ISO8601
              */
-            "timestamp" => "2018-03-10T19:15:45-05:00",
+            "timestamp" => "2021-06-30 14:25:20",
 
             // The integer color to be used on the left side of the embed
-            "color" => hexdec( "FFFFFF" ),
+            "color" => hexdec( "0094cc" ),
 
             // Field array of objects
             "fields" => [
