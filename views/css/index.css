@@ -1,51 +1,89 @@
-html,
-body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
+.u-section-1 {
+  background-image: none;
 }
 
-.full-height {
-    height: 100vh;
+.u-section-1 .u-sheet-1 {
+  min-height: 1233px;
 }
 
-.flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.u-section-1 .u-shape-1 {
+  width: 250px;
+  height: 188px;
+  margin: 56px -163px 0 auto;
 }
 
-.position-ref {
-    position: relative;
+.u-section-1 .u-text-1 {
+  font-size: 3.75rem;
+  font-weight: 100;
+  margin: -44px 0 0;
 }
 
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+.u-section-1 .u-text-2 {
+  font-weight: 300;
+  margin: 50px 0 0;
 }
 
-.content {
-    text-align: center;
+.u-section-1 .u-shape-2 {
+  width: 250px;
+  height: 250px;
+  margin: -167px auto 0 -191px;
 }
 
-.title {
-    font-size: 84px;
+.u-section-1 .u-text-3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: -73px 0 0;
 }
 
-.links>a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+.u-section-1 .u-shape-3 {
+  width: 145px;
+  height: 144px;
+  margin: 211px 326px 0 auto;
 }
 
-.m-b-md {
-    margin-bottom: 30px;
+.u-section-1 .u-form-1 {
+  height: 261px;
+  width: 840px;
+  margin: 172px auto 60px;
+}
+
+.u-section-1 .u-input-1 {
+  font-weight: 200;
+}
+
+.u-section-1 .u-input-2 {
+  font-weight: 200;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: solid;
+  width: 30%;
+  font-weight: 200;
+  padding: 11px 31px 12px 29px;
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-form-1 {
+    width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-form-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    font-size: 1.5rem;
+  }
+
+  .u-section-1 .u-shape-3 {
+    margin-right: 195px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 340px;
+  }
 }
