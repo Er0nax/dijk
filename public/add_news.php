@@ -10,6 +10,8 @@ include '../app/classes/paths.php';
 include '../app/database.php';
 include '../app/classes/config.php';
 
-$get_news = get_news($con);
+$username = $_SESSION["name"];
+ping_database($username, $con);
 
-require '../views/home.view.php';
+
+require '../views/add_news.view.php';

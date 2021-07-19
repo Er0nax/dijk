@@ -1,7 +1,8 @@
 <?php
-// This is the start of the website. 
-// You will be redirected to /views/home.view.php
+// You will be redirected to /views/users.view.php
 // Do not change the link or else it will not work.
+
+// You need admin power in order to see this website.
 
 session_start();
 
@@ -10,6 +11,6 @@ include '../app/classes/paths.php';
 include '../app/database.php';
 include '../app/classes/config.php';
 
-$get_news = get_news($con);
+$all_users = get_all_users($con);
 
-require '../views/home.view.php';
+require '../views/users.view.php';
