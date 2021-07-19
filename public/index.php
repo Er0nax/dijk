@@ -1,6 +1,6 @@
 <?php
 // This is the start of the website. 
-// You will be redirected to /views/home.view.php
+// You will be redirected to /views/Index.view.php
 // Do not change the link or else it will not work.
 
 session_start();
