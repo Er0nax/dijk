@@ -23,7 +23,7 @@
       </div>
       <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">TruckersMP</a>
       <a href="../public/users.php" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Meet the Team</a>
-      <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Discord<br>
+      <a href="<?php echo $discordinvite ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Discord<br>
       </a>
     </div>
   </section>
@@ -100,7 +100,7 @@
                 <p class="u-text u-text-2">You might ask. Van Dijk is a VTC founded on the 21st of March, in 2021. Our priority is creating a trucking company for all the Holland/Greek/Danish style lovers all around the world, out there, in the TruckersMP Community.&nbsp;<br>
                   <br>There's one thing in which we don't differ, and that's our love shown towards all kind of amazing looking trucks.
                 </p>
-                <a href="" class="u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-2 u-radius-10 u-btn-1">Join our Discord Guild</a>
+                <a href="https://discord.com/invite/UaYwrVpwc3" class="u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-2 u-radius-10 u-btn-1">Join our Discord Guild</a>
               </div>
             </div>
           </div>

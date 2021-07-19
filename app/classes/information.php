@@ -5,3 +5,4 @@
 // Do not change them if you don't know what and where they are!
 
 $name = "Van Dijk B.V";
+$discordinvite = 'https://discord.com/invite/UaYwrVpwc3';

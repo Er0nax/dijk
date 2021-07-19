@@ -12,4 +12,4 @@ include '../app/classes/config.php';
 
 $get_news = get_news($con);
 
-require '../views/home.view.php';
+require '../views/index.view.php';
