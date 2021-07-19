@@ -24,12 +24,12 @@ CREATE TABLE IF NOT EXISTS `banks` (
   `balance` int(11) NOT NULL DEFAULT 0,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.banks: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.banks: ~14 rows (ungefähr)
 /*!40000 ALTER TABLE `banks` DISABLE KEYS */;
 INSERT INTO `banks` (`id`, `username`, `balance`, `timestamp`) VALUES
-	(1, 'Eronax', 0, '2021-06-29 15:59:35'),
+	(1, 'Eronax', 219418, '2021-07-19 12:27:27'),
 	(2, 'Fiber', 0, '2021-06-29 15:59:28'),
 	(3, 'Tim', 0, '2021-06-28 13:33:18'),
 	(4, 'Botond', 0, '2021-06-29 15:59:36'),
@@ -43,7 +43,9 @@ INSERT INTO `banks` (`id`, `username`, `balance`, `timestamp`) VALUES
 	(12, 'CactusCookie', 0, '2021-06-29 15:49:03'),
 	(13, 'Ace', 0, '2021-06-29 15:49:18'),
 	(14, 'FuPa', 0, '2021-06-29 15:49:35'),
-	(15, 'Yunomi', 0, '2021-06-29 15:51:01');
+	(15, 'Yunomi', 0, '2021-06-29 15:51:01'),
+	(16, 'Guest', 0, '2021-06-30 08:55:46'),
+	(17, 'KnockKnock', 0, '2021-06-30 11:50:53');
 /*!40000 ALTER TABLE `banks` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.cities
@@ -52,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `cities` (
   `city` varchar(50) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=512 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=utf8mb4;
 
 -- Exportiere Daten aus Tabelle dijk_vtc.cities: ~279 rows (ungefähr)
 /*!40000 ALTER TABLE `cities` DISABLE KEYS */;
@@ -341,7 +343,7 @@ INSERT INTO `cities` (`id`, `city`, `timestamp`) VALUES
 -- Exportiere Struktur von Tabelle dijk_vtc.jobs
 CREATE TABLE IF NOT EXISTS `jobs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_Id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `departure_id` int(11) NOT NULL,
   `destination_id` int(11) NOT NULL,
@@ -355,10 +357,14 @@ CREATE TABLE IF NOT EXISTS `jobs` (
   PRIMARY KEY (`id`),
   KEY `FK_jobs_trucks` (`truck_id`),
   CONSTRAINT `FK_jobs_trucks` FOREIGN KEY (`truck_id`) REFERENCES `trucks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.jobs: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.jobs: ~3 rows (ungefähr)
 /*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
+INSERT INTO `jobs` (`id`, `user_id`, `username`, `departure_id`, `destination_id`, `truck_id`, `cargo`, `income`, `distance`, `admin`, `evidence`, `timestamp`) VALUES
+	(1, 1, 'Eronax', 51, 81, 1, 'Tomatos', 48535, 948, '', 'me = admin', '2021-07-19 12:25:37'),
+	(2, 1, 'Eronax', 12, 175, 1, 'Potatos', 92485, 1593, '', 'Admin Again ;)', '2021-07-19 12:26:25'),
+	(3, 1, 'Eronax', 19, 198, 5, 'Chips', 78398, 1028, '', 'admin againnnnn ;)', '2021-07-19 12:27:27');
 /*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.levels
@@ -368,12 +374,12 @@ CREATE TABLE IF NOT EXISTS `levels` (
   `level` int(11) NOT NULL DEFAULT 0,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.levels: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.levels: ~14 rows (ungefähr)
 /*!40000 ALTER TABLE `levels` DISABLE KEYS */;
 INSERT INTO `levels` (`id`, `username`, `level`, `timestamp`) VALUES
-	(1, 'Eronax', 0, '2021-06-29 15:59:44'),
+	(1, 'Eronax', 43345, '2021-07-19 12:49:33'),
 	(2, 'Fiber', 0, '2021-06-29 15:59:28'),
 	(3, 'Tim', 0, '2021-06-28 13:33:18'),
 	(4, 'Botond', 0, '2021-06-29 15:59:45'),
@@ -387,7 +393,9 @@ INSERT INTO `levels` (`id`, `username`, `level`, `timestamp`) VALUES
 	(12, 'CactusCookie', 0, '2021-06-29 15:49:03'),
 	(13, 'Ace', 0, '2021-06-29 15:49:18'),
 	(14, 'FuPa', 0, '2021-06-29 15:49:35'),
-	(15, 'Yunomi', 0, '2021-06-29 15:51:01');
+	(15, 'Yunomi', 0, '2021-06-29 15:51:01'),
+	(16, 'Guest', 0, '2021-06-30 08:55:46'),
+	(17, 'KnockKnock', 0, '2021-06-30 11:50:53');
 /*!40000 ALTER TABLE `levels` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.news
@@ -398,20 +406,12 @@ CREATE TABLE IF NOT EXISTS `news` (
   `body` text NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.news: ~9 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.news: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
 INSERT INTO `news` (`id`, `username`, `title`, `body`, `timestamp`) VALUES
-	(1, 'Eronax', 'New Database Structure', 'We\'ve implemented a new database structure to our website!', '2021-06-28 13:33:51'),
-	(2, 'Tim', 'Job Logger Started', '<u>We\'ve been working</u> <br> on a job logger for the past few weeks and we\'re coming closer to realase!', '2021-06-29 13:19:56'),
-	(3, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:23:16'),
-	(4, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:23:21'),
-	(5, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:23:33'),
-	(6, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:23:34'),
-	(7, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:23:35'),
-	(8, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:23:35'),
-	(9, 'Eronax', 'Thanks to our <b>Developers!</b>', 'Our <span style="color:purple">Developers</span> has been <b>working hard</b> the past few days. Thanks to them, our website can be released earlier then we might planned! More information can be <a href="https://discord.gg/vdr">found here</a>.', '2021-06-29 15:24:01');
+	(1, 'Eronax', 'Job Logger', '<u>We\'ve been working</u> <br> on a job logger for the past few weeks and we\'re coming closer to realase!', '2021-07-19 11:02:03');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.roles
@@ -424,13 +424,13 @@ CREATE TABLE IF NOT EXISTS `roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.roles: ~18 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.roles: ~16 rows (ungefähr)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`id`, `perms`, `name`, `color`, `timestamp`) VALUES
 	(1, 101, 'Chief Executive Officer', '#FF0000', '2021-06-29 15:38:39'),
 	(2, 101, 'Chief Operating Officer', '#FF0202', '2021-06-29 15:38:57'),
 	(3, 91, 'General Manager', '#2B1435', '2021-06-29 15:38:25'),
-	(4, 101, 'Developer', '#71368A', '2021-06-29 15:38:52'),
+	(4, 101, 'Developer', '#71368A', '2021-07-19 11:18:28'),
 	(5, 81, 'Human Resources', '#ffc4ea', '2021-06-29 15:39:02'),
 	(6, 81, 'Community Moderation Manager', '#a2371c', '2021-06-29 15:42:51'),
 	(7, 61, 'Media Manager', '#184f80', '2021-06-29 15:42:41'),
@@ -479,31 +479,35 @@ CREATE TABLE IF NOT EXISTS `users` (
   `truckersmp` varchar(50) NOT NULL,
   `user_pb` text NOT NULL DEFAULT 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg',
   `status_color` varchar(50) NOT NULL DEFAULT '#fff',
-  `information` text NOT NULL DEFAULT 'There is no information here.',
+  `information` text NOT NULL DEFAULT 'There is no information yet.',
+  `last_online` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `FK_users_roles` (`role_id`),
   CONSTRAINT `FK_users_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.users: ~15 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.users: ~17 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `status_color`, `information`, `timestamp`) VALUES
-	(1, 'Eronax', 'admin', 4, 'Verified', 'Eronax#2491', '13169982', 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#7979ff', 'Hey there! I am the developer of this website :) Nice to meet ya.', '2021-06-28 13:31:16'),
-	(2, 'Fiber', 'admin', 1, 'Verified', 'Fiber.®#0007', '2739794', 'https://images-ext-1.discordapp.net/external/-zNPLldEwgkYfLVINl-U5MuvVj7LcTZUoBh15V6f3kM/%3Fsize%3D256%26f%3D.gif/https/cdn.discordapp.com/avatars/568753486326398989/a_0e7a9f400167f4d3db29c6996eab56ad.gif', '#00ff00', 'There is no information here.', '2021-06-28 13:33:09'),
-	(3, 'Tim', 'admin', 18, 'Not Verified', '.Tim.#1999', '113811', 'https://images-ext-1.discordapp.net/external/cTuG7euCeMJkZUIUQ7XWoY2m3gAKyql6XzB6AEe7_NA/%3Fsize%3D256/https/cdn.discordapp.com/avatars/342695033348161556/d2ef1c78883c0b34f93ab108f45bd3c0.png', '#ffffff', 'There is no information here.', '2021-06-28 13:33:18'),
-	(4, 'Botond', 'admin', 2, 'Partnered', 'Botiful #3215', '1384788', 'https://images-ext-1.discordapp.net/external/cpP-3r30pguHtP5o0Gx6rBtOyymKABNHceMJAXCb0j0/%3Fsize%3D256%26f%3D.gif/https/cdn.discordapp.com/avatars/436173560931680258/a_9e52c970020ea0ea6f009ac485cff169.gif', '#00ffff', 'This is Botond.', '2021-06-28 13:33:31'),
-	(5, 'Alex', 'admin', 13, 'Not Verified', 'XaniTrucker[GER]#0001', '3455435', 'https://images-ext-1.discordapp.net/external/DUJ9abiNNnu_MtVM5l-bJj6xwO235hzhAhlpg595Rv0/%3Fsize%3D256/https/cdn.discordapp.com/avatars/646380684528582666/ed5a0664f4b7cb3bf829c34fc65d8e11.png', '#ff0080', 'There is no information here.', '2021-06-28 13:34:06'),
-	(6, 'Elias', 'admin', 8, 'Not Verified', 'Elias. #6507', '3636432', 'https://images-ext-2.discordapp.net/external/bL8eMAHJa6o_KkZUJZ6TE6R555ZzF7GpKTQGA-aRhSo/%3Fsize%3D256/https/cdn.discordapp.com/avatars/409770394892107777/05ec689f7ffc2eb6ca9d1c654b72c9f1.png', '#ff8040', 'There is no information here.', '2021-06-28 13:34:17'),
-	(7, 'Admin', 'admin', 18, 'Not Verified', 'admin', '3942342', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#ffff80', 'edited as admin account', '2021-06-28 13:34:31'),
-	(8, 'amps', 'admin', 3, 'Not Verified', 'azzurri#8475', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:45:40'),
-	(9, 'Foxi', 'admin', 7, 'Not Verified', 'Foxi17.#6238', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:45:58'),
-	(10, 'Pizza', 'admin', 5, 'Not Verified', 'pizza driver.🍕#0118', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:46:27'),
-	(11, 'Zir', 'admin', 6, 'Not Verified', '𝒁𝒊𝒓-𝒄𝒐𝒏𝒊𝒔#2661', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:46:46'),
-	(12, 'CactusCookie', 'admin', 15, 'Not Verified', 'CactusCookie#2004', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:49:03'),
-	(13, 'Ace', 'admin', 17, 'Not Verified', '.Ace.#0405', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:49:18'),
-	(14, 'FuPa', 'admin', 17, 'Not Verified', 'FuPa#0792', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:49:35'),
-	(15, 'Yunomi', 'admin', 17, 'Not Verified', 'Yunomi#0728', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-06-29 15:51:01');
+INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `status_color`, `information`, `last_online`, `updated_at`, `timestamp`) VALUES
+	(1, 'Eronax', 'admin', 4, 'Verified', 'Eronax#2491', '13169982', 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#00eeff', 'Just a random manager over at Van Der Roling.', '2021-07-19 14:48:35', '2021-07-19 14:48:35', '2021-06-28 13:31:16'),
+	(2, 'Fiber', 'admin', 1, 'Verified', 'Fiber.®#0007', '2739794', 'https://images-ext-1.discordapp.net/external/-zNPLldEwgkYfLVINl-U5MuvVj7LcTZUoBh15V6f3kM/%3Fsize%3D256%26f%3D.gif/https/cdn.discordapp.com/avatars/568753486326398989/a_0e7a9f400167f4d3db29c6996eab56ad.gif', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-06-20 12:54:29', '2021-06-28 13:33:09'),
+	(3, 'Tim', 'admin', 18, 'Not Verified', '.Tim.#1999', '113811', 'https://cdn.discordapp.com/avatars/342695033348161556/ff7cf6960228a610b696f90f718fc9c8.png?size=1024', '#d04e4e', 'There is no information here.', '2021-07-19 14:33:18', '2021-07-19 14:33:18', '2021-06-28 13:33:18'),
+	(4, 'Botond', 'admin', 1, 'Verified', 'Botiful #3215', '1384788', 'https://images-ext-1.discordapp.net/external/cpP-3r30pguHtP5o0Gx6rBtOyymKABNHceMJAXCb0j0/%3Fsize%3D256%26f%3D.gif/https/cdn.discordapp.com/avatars/436173560931680258/a_9e52c970020ea0ea6f009ac485cff169.gif', '#fff', 'KnockKnock ist nice', '2021-07-19 13:44:05', '2021-06-12 12:54:29', '2021-06-28 13:33:31'),
+	(5, 'Alex', 'admin', 13, 'Not Verified', 'XaniTrucker[GER]#0001', '3455435', 'https://images-ext-1.discordapp.net/external/DUJ9abiNNnu_MtVM5l-bJj6xwO235hzhAhlpg595Rv0/%3Fsize%3D256/https/cdn.discordapp.com/avatars/646380684528582666/ed5a0664f4b7cb3bf829c34fc65d8e11.png', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-05-07 12:54:29', '2021-06-28 13:34:06'),
+	(6, 'Elias', 'admin', 8, 'Not Verified', 'Elias. #6507', '3636432', 'https://images-ext-2.discordapp.net/external/bL8eMAHJa6o_KkZUJZ6TE6R555ZzF7GpKTQGA-aRhSo/%3Fsize%3D256/https/cdn.discordapp.com/avatars/409770394892107777/05ec689f7ffc2eb6ca9d1c654b72c9f1.png', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-06-23 12:54:29', '2021-06-28 13:34:17'),
+	(7, 'Admin', 'admin', 18, 'Not Verified', 'admin', '3942342', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-04-06 12:54:29', '2021-06-28 13:34:31'),
+	(8, 'amps', 'admin', 3, 'Not Verified', 'azzurri#8475', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-05-16 12:54:29', '2021-06-29 15:45:40'),
+	(9, 'Foxi', 'admin', 7, 'Not Verified', 'Foxi17.#6238', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-06-12 12:54:29', '2021-06-29 15:45:58'),
+	(10, 'Pizza', 'admin', 5, 'Not Verified', 'pizza driver.🍕#0118', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-06-19 12:54:29', '2021-06-29 15:46:27'),
+	(11, 'Zir', 'admin', 6, 'Not Verified', '𝒁𝒊𝒓-𝒄𝒐𝒏𝒊𝒔#2661', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-07-11 12:54:26', '2021-06-29 15:46:46'),
+	(12, 'CactusCookie', 'admin', 17, 'Not Verified', 'CactusCookie#2004', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#000000', 'There is no information here.', '2021-07-19 13:44:05', '2021-07-04 12:54:29', '2021-06-29 15:49:03'),
+	(13, 'Ace', 'admin', 17, 'Not Verified', '.Ace.#0405', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-07-14 12:54:29', '2021-06-29 15:49:18'),
+	(14, 'FuPa', 'admin', 17, 'Not Verified', 'FuPa#0792', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-07-06 12:54:29', '2021-06-29 15:49:35'),
+	(15, 'Yunomi', 'admin', 17, 'Not Verified', 'Yunomi#0728', '99999', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-07-08 12:54:29', '2021-06-29 15:51:01'),
+	(16, 'Guest', 'guest', 18, 'Not Verified', 'Van Dijk Guest', '0', 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg', '#fff', 'There is no information here.', '2021-07-19 13:44:05', '2021-07-16 12:54:29', '2021-06-30 08:55:46'),
+	(17, 'KnockKnock', 'admin', 16, 'VIP', 'KnockKnock#9201', '99999', 'https://cdn.discordapp.com/avatars/289858294464380931/8886ff28dee2a8ed7e14173f1823c272.png?size=256', '#fff', 'I love our social studies teacher. She\'s so friendly and perfect! <3', '2021-07-19 13:44:05', '2021-07-11 12:54:29', '2021-06-30 11:50:53');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
