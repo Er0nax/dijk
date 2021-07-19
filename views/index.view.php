@@ -21,9 +21,9 @@
           <h5 class="u-custom-font u-font-raleway u-text u-text-2"><?php echo $get_news['body'] ?></h5>
           <h6 style="padding-bottom: 20px; text-align: center; color: lightgrey;" class="u-align-left u-custom-font u-font-raleway u-text u-text-3">by <a href="../public/profile.php?id=<?php echo $get_news['user_id'] ?>" style="color: <?php echo $get_news['color'] ?>;"> <?php echo $get_news['username'] ?></a></h6>        </div>
       </div>
-      <a href="<?php echo $truckersmplink ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">TruckersMP</a>
-      <a href="../public/users.php" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Meet the Team</a>
-      <a href="<?php echo $discordinvite ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Discord<br>
+      <a style="width: 200px;" href="<?php echo $second_button_link ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><?php echo $second_button_name; ?></a>
+      <a style="width: 200px;" href="<?php echo $third_button_link ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><?php echo $third_button_name; ?></a>
+      <a style="width: 200px;" href="<?php echo $first_button_link ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><?php echo $first_button_name; ?><br>
       </a>
     </div>
   </section>
@@ -38,8 +38,8 @@
                   <path d="m118.6 47.8h-61.2c-5.2 0-9.4 4.2-9.4 9.3v35.7c0 5.1 4.2 9.3 9.4 9.3h37.5l16.8 16.8c2.5 2.5 6.8 0.7 6.8-2.8v-10-3.9h0.1c5.2 0 9.4-4.2 9.4-9.3v-35.8c0-5.1-4.2-9.3-9.4-9.3zm1.2 45c0 0.7-0.5 1.2-1.2 1.2h-5.2c-1.6 0-2.9 1.2-3.1 2.8v9.2l-11.2-11.2c-0.5-0.5-1.3-0.8-2-0.8h-39.7c-0.7 0-1.2-0.5-1.2-1.2v-35.7c0-0.7 0.5-1.2 1.2-1.2h61.3c0.7 0 1.2 0.5 1.2 1.2v35.7z"></path>
                   <path d="m38.1 67.7c-1 0-2 0.4-2.7 1-0.1 0-0.1 0.1-0.2 0.2l-14.7 15.1v-12.5c-0.2-2.1-1.9-3.8-4-3.8h-6.9c-0.9 0-1.6-0.7-1.6-1.6v-48.3c0-0.9 0.7-1.6 1.6-1.6h80.8c0.9 0 1.6 0.7 1.6 1.6v30.1h8v-30.1c0-5.4-4.3-9.8-9.6-9.8h-80.8c-5.3 0-9.6 4.4-9.6 9.8v48.3c0 5.4 4.3 9.8 9.6 9.8h2.9v8.1 10c0 3.6 4.4 5.3 6.9 2.8l6.8-7 13.6-13.9h8.2v-8.2h-9.9z"></path>
                 </svg></span>
-              <h3 class="u-text u-text-body-alt-color u-text-1">Support</h3>
-              <p class="u-text u-text-body-alt-color u-text-2">24/7 Support on our Discord Guild.<br>Whenever you need help, we will try to help you in the best way possible.
+              <h3 class="u-text u-text-body-alt-color u-text-1"><?php echo $firsttitle ?></h3>
+              <p class="u-text u-text-body-alt-color u-text-2"><?php echo $firstbody ?>
               </p>
             </div>
           </div>
@@ -57,8 +57,8 @@
                   <path d="m168 312c-4.417969 0-8 3.582031-8 8v128c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-128c0-4.417969-3.582031-8-8-8zm0 0"></path>
                   <path d="m312 312c-4.417969 0-8 3.582031-8 8v128c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-128c0-4.417969-3.582031-8-8-8zm0 0"></path>
                 </svg></span>
-              <h3 class="u-text u-text-body-alt-color u-text-3">Friendly Staff</h3>
-              <p class="u-text u-text-body-alt-color u-text-4">With the big knowledge of our staff team you will never have any problems.<br>
+              <h3 class="u-text u-text-body-alt-color u-text-3"><?php echo $secondtitle ?></h3>
+              <p class="u-text u-text-body-alt-color u-text-4"><?php echo $secondbody ?><br>
               </p>
             </div>
           </div>
@@ -74,8 +74,8 @@
                     <path d="M323.745,82.602c-32.111-31.684-74.642-49.133-119.756-49.133S116.345,50.918,84.232,82.602   c-32.08,31.652-50.101,73.879-50.743,118.901c-0.036,2.548,1.54,4.84,3.931,5.718c0.676,0.249,1.375,0.368,2.067,0.368   c1.757,0,3.468-0.772,4.63-2.183c35.761-43.36,95.526-69.247,159.871-69.247c64.345,0,124.109,25.887,159.871,69.247   c1.621,1.966,4.306,2.691,6.697,1.814c2.392-0.878,3.968-3.17,3.931-5.718C373.847,156.481,355.825,114.254,323.745,82.602z    M203.989,124.16c-61.308,0-118.816,22.444-157.385,60.743c4.237-35.489,20.255-68.301,46.057-93.759   c29.852-29.454,69.389-45.675,111.329-45.675s81.477,16.221,111.328,45.675c25.802,25.458,41.82,58.27,46.058,93.759   C322.805,146.604,265.297,124.16,203.989,124.16z"></path>
                   </g>
                 </svg></span>
-              <h3 class="u-text u-text-body-alt-color u-text-5">Drivers Hub</h3>
-              <p class="u-text u-text-body-alt-color u-text-6">Once you are a driver for Van Dijk, you will get access to our Drivers Hub.<br>Many features will come along.
+              <h3 class="u-text u-text-body-alt-color u-text-5"><?php echo $thirdtitle ?></h3>
+              <p class="u-text u-text-body-alt-color u-text-6"><?php echo $thirdbody ?>
               </p>
             </div>
           </div>
@@ -96,11 +96,10 @@
             </div>
             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-37 u-layout-cell-2">
               <div class="u-container-layout u-container-layout-2">
-                <h2 class="u-text u-text-1">About Us</h2>
-                <p class="u-text u-text-2">You might ask. Van Dijk is a VTC founded on the 21st of March, in 2021. Our priority is creating a trucking company for all the Holland/Greek/Danish style lovers all around the world, out there, in the TruckersMP Community.&nbsp;<br>
-                  <br>There's one thing in which we don't differ, and that's our love shown towards all kind of amazing looking trucks.
+                <h2 class="u-text u-text-1"><?php echo $blocktitle ?></h2>
+                <p class="u-text u-text-2"><?php echo $blockbody ?>
                 </p>
-                <a href="<?php echo $discordinvite ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-2 u-radius-10 u-btn-1">Join our Discord Guild</a>
+                <a href="<?php echo $block_button_link ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-hover-custom-color-2 u-radius-10 u-btn-1"><?php echo $block_button_name ?></a>
               </div>
             </div>
           </div>
