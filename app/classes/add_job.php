@@ -29,6 +29,8 @@ if (mysqli_query($con, $sql_insert_jobs)) {
     $sql_edit_bank = "UPDATE banks SET banks.balance = banks.balance + $income WHERE banks.username='$username'";
     if (mysqli_query($con, $sql_edit_bank)) {
         // log
+        header('Location: /public/profile.php');
+        exit;
     } else {
         echo "ERROR: Could not able to execute $sql_edit_bank. " . mysqli_error($con);
     }
