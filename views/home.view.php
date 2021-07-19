@@ -32,7 +32,7 @@
       <div class="u-expanded-width u-list u-list-1">
         <div class="u-repeater u-repeater-1">
           <div class="u-align-center u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-icon u-icon-circle u-text-white u-icon-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style="">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-icon u-icon-circle u-text-white u-icon-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8998"></use>
                 </svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-8998">
                   <path d="m118.6 47.8h-61.2c-5.2 0-9.4 4.2-9.4 9.3v35.7c0 5.1 4.2 9.3 9.4 9.3h37.5l16.8 16.8c2.5 2.5 6.8 0.7 6.8-2.8v-10-3.9h0.1c5.2 0 9.4-4.2 9.4-9.3v-35.8c0-5.1-4.2-9.3-9.4-9.3zm1.2 45c0 0.7-0.5 1.2-1.2 1.2h-5.2c-1.6 0-2.9 1.2-3.1 2.8v9.2l-11.2-11.2c-0.5-0.5-1.3-0.8-2-0.8h-39.7c-0.7 0-1.2-0.5-1.2-1.2v-35.7c0-0.7 0.5-1.2 1.2-1.2h61.3c0.7 0 1.2 0.5 1.2 1.2v35.7z"></path>
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-icon u-icon-circle u-text-white u-icon-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 -12 480 480" style="">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-icon u-icon-circle u-text-white u-icon-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 -12 480 480">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ca30"></use>
                 </svg><svg class="u-svg-content" viewBox="0 -12 480 480" id="svg-ca30">
                   <path d="m56 232c-4.417969 0-8 3.582031-8 8v128c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-128c0-4.417969-3.582031-8-8-8zm0 0"></path>
@@ -63,7 +63,7 @@
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-icon u-icon-circle u-text-white u-icon-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 407.98 407.98" style="">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-icon u-icon-circle u-text-white u-icon-3" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 407.98 407.98">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6522"></use>
                 </svg><svg class="u-svg-content" viewBox="0 0 407.98 407.98" x="0px" y="0px" id="svg-6522" style="enable-background:new 0 0 407.98 407.98;">
                   <g>
