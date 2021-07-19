@@ -6,3 +6,4 @@
 
 $name = "Van Dijk B.V";
 $discordinvite = 'https://discord.com/invite/UaYwrVpwc3';
+$truckersmplink = 'https://truckersmp.com/vtc/39605';
