@@ -82,7 +82,7 @@ if (isset($_SESSION["name"])) {
                                     </li>
                                     <?php if ($user_information["perms"] > 70) { ?>
 
-                                        <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/add_news.php">My Admin</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/my_admin.php">My Admin</a>
                                         </li>
                                     <?php } ?>
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
@@ -110,7 +110,7 @@ if (isset($_SESSION["name"])) {
                                             </li>
                                             <?php if ($user_information["perms"] > 70) { ?>
 
-                                                <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/add_news.php">Add News</a>
+                                                <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/my_admin.php">Add News</a>
                                                 </li>
                                             <?php } ?>
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>

@@ -45,7 +45,7 @@
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <div class="u-border-1 u-border-custom-color-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
       <div class="u-expanded-width u-form u-form-1">
-        <form action="../app/classes/add_news.php" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
+        <form action="../app/classes/my_admin.php" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-custom-font u-font-raleway u-form-control-hidden u-label">Name</label>
             <input type="text" placeholder="News Title" id="name-3b9a" name="title" class="u-border-1 u-border-custom-color-3 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">

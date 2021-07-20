@@ -14,4 +14,4 @@ $username = $_SESSION["name"];
 ping_database($username, $con);
 
 
-require '../views/add_news.view.php';
+require '../views/my_admin.view.php';
