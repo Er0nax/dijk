@@ -40,7 +40,8 @@
           <div class="u-form-group u-form-select u-form-group-2">
             <label for="select-ce55" class="u-form-control-hidden u-label"></label>
             <div class="u-form-select-wrapper">
-              <select id="select-ce55" name="role_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-2">
+              <select style="background-color: #2C4A5C;" id="select-ce55" name="role_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required>
+              <option value="">Please choose a Role</option>
                 <?php while ($role = $list_all_roles->fetch_assoc()) : ?>
                   <option value="<?php echo $role['id'] ?>"><?php echo $role['name'] ?></option>
                 <?php endwhile; ?>

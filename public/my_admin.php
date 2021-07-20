@@ -14,7 +14,7 @@ $username = $_SESSION["name"];
 
 $get_tokens = get_tokens($con);
 
-$string = getName(10);
+$string = getName(100);
 
 ping_database($username, $con);
 

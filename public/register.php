@@ -8,4 +8,10 @@ session_start();
 include_once '../app/classes/information.php';
 include_once '../app/classes/paths.php';
 
+if(isset($_GET['message'])) {
+    if ($_GET['message'] == 'invalid_token') {
+        echo '<script>alert("Token is invalid!");</script> ';
+    }
+}
+
 require '../views/register.view.php';

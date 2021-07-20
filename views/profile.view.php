@@ -81,28 +81,28 @@
           <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-8">Average Job:</h5>
           <div class="u-border-1 u-border-custom-color-3 u-line u-line-horizontal u-line-3"></div>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-9"><?php echo $user_jobs_information['average_income'] ?> €</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-10">Income:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-11">Distance:</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-10">Ø Income:</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-11">Ø Distance:</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-12"><?php echo $user_jobs_information['average_distance'] ?> km</h5>
         </div>
       </div>
       <div class="u-container-style u-custom-color-1 u-group u-radius-10 u-shape-round u-group-2">
         <div class="u-container-layout u-container-layout-2">
-          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-13">User Statistics</h5>
+          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-13">User Information</h5>
           <div class="u-border-1 u-border-custom-color-3 u-line u-line-horizontal u-line-4"></div>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-14">Balance:</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-15"><?php echo $get_profile_information['balance'] ?> €</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-16">Account:</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-17"><?php echo $get_profile_information['status'] ?></h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-18">Joined:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-19"><?php echo $get_profile_information['timestamp'] ?></h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-19"><?php echo $get_profile_information['created_at'] ?></h5>
           <div class="u-border-1 u-border-custom-color-3 u-line u-line-horizontal u-line-5"></div>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-20"><?php echo $get_profile_information['discord'] ?></h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-21">Discord:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-22">Truckers MP:</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-22">TMP ID:</h5>
           <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-23"><?php echo $get_profile_information['truckersmp'] ?></h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-24">Level Progress:</h5>
-          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-25"><progress id="file" value="<?php echo $get_profile_information['level'] ?>" max="100000"> </progress>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-24">Level Status:</h5>
+          <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-25"><progress id="file" value="<?php echo $get_profile_information["level"] ?>" max="100000"> </progress>
           </h5>
         </div>
       </div>

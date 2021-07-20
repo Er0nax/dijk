@@ -27,7 +27,7 @@ $update = mysqli_query($con, $uinsert) or die(mysqli_error($con));
 if(mysqli_affected_rows($con) >0 ) { //ifnum
 	# continue
 } else {
-	header('Location: /public/register.php?message=incorrect_token');
+	header('Location: /public/register.php?message=invalid_token');
 	exit;
 }
 

@@ -89,11 +89,12 @@ function get_all_users($con)
 
 function get_profile_information($con, $current_id)
 {
-    $query = "SELECT users.id, users.last_online, users.password, users.role_id AS 'roleid', users.username, users.status, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.timestamp, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', levels.level, banks.balance, roles.perms AS 'perms'
+    $query = "SELECT users.id, users.last_online, users.password, users.role_id AS 'roleid', users.username, users.status, tokens.token, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.created_at, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', levels.level, banks.balance, roles.perms AS 'perms'
     FROM users
     JOIN roles ON users.role_id=roles.id
     JOIN levels ON users.id=levels.id
     JOIN banks ON users.id=banks.id
+    JOIN tokens on tokens.used_by=users.username
     WHERE users.id='$current_id'";
     $result = $con->query($query);
     $get_profile_information = $result->fetch_assoc();
@@ -175,7 +176,7 @@ function get_news($con)
     FROM news
     JOIN users ON news.username=users.username
     JOIN roles ON users.role_id=roles.id
-    ORDER BY news.timestamp DESC";
+    ORDER BY news.created_at DESC";
     $result = $con->query($query);
     $get_news = $result->fetch_assoc();
 
