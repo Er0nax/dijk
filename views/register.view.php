@@ -40,6 +40,11 @@
             <input type="text" placeholder="TruckersMP ID" id="text-9af8" name="truckersmp" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
           </div>
           <br>
+          <div class="u-form-group u-form-group-3">
+            <label for="text-8b2a" class="u-form-control-hidden u-label">Token</label>
+            <input type="text" placeholder="Token" id="text-8b2a" name="token" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
+          </div>
+          <br>
           <div class="u-align-center u-form-group u-form-submit">
             <a href="#" class="u-border-1 u-border-hover-palette-4-base u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-custom-font u-font-raleway u-none u-radius-20 u-text-hover-palette-4-base u-btn-1">Submit</a>
             <input type="submit" value="submit" class="u-form-control-hidden">

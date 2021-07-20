@@ -64,7 +64,7 @@
       </div>
       <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-1">
         <div class="u-container-layout u-container-layout-1">
-          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-1">Register Tokens: <button type="button" data-href="../app/classes/generate_token.php">Generate Token</button></h5>
+          <h5 data-href="../app/classes/generate_token.php" class="u-align-center u-custom-font u-font-raleway u-text u-text-1">Register Tokens:</h5>
 
           <table style="width:100%">
             <tr>
