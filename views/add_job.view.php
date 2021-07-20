@@ -41,7 +41,7 @@
           <div class="u-form-group u-form-select u-form-group-2">
             <label for="select-ce55" class="u-form-control-hidden u-label"></label>
             <div class="u-form-select-wrapper">
-              <select id="select-ce55" name="truck_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
+              <select style="background-color: #2C4A5C;" id="select-ce55" name="truck_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
                 <?php while ($truck = $get_all_trucks->fetch_assoc()) : ?>
                   <option value="<?php echo $truck['id'] ?>"><?php echo $truck['truck'] ?></option>
                 <?php endwhile; ?>
@@ -56,7 +56,7 @@
           <div class="u-form-group u-form-select u-form-group-2">
             <label for="select-ce55" class="u-form-control-hidden u-label"></label>
             <div class="u-form-select-wrapper">
-              <select id="select-ce55" name="departure_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
+              <select style="background-color: #2C4A5C;" id="select-ce55" name="departure_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
                 <?php while ($city = $get_departure_city->fetch_assoc()) : ?>
                   <option value="<?php echo $city['id'] ?>"><?php echo $city['city'] ?></option>
                 <?php endwhile; ?>
@@ -71,7 +71,7 @@
           <div class="u-form-group u-form-select u-form-group-2">
             <label for="select-ce55" class="u-form-control-hidden u-label"></label>
             <div class="u-form-select-wrapper">
-              <select id="select-ce55" name="destination_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
+              <select style="background-color: #2C4A5C;" id="select-ce55" name="destination_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
                 <?php while ($city = $get_destination_city->fetch_assoc()) : ?>
                   <option value="<?php echo $city['id'] ?>"><?php echo $city['city'] ?></option>
                 <?php endwhile; ?>
@@ -85,7 +85,7 @@
 
           <div class="u-form-group u-form-message">
             <label for="message-3b9a" class="u-form-control-hidden u-label"></label>
-            <textarea placeholder="Evidence" rows="4" cols="50" id="message-3b9a" name="evidence" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required=""></textarea>
+            <textarea placeholder="Evidence" rows="8" cols="50" id="message-3b9a" name="evidence" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required=""></textarea>
           </div>
           <br>
 

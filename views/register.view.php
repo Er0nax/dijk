@@ -13,7 +13,7 @@
   <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 </head>
 
-<bodyclass="u-body">
+<body class="u-body">
   <?php include($header); ?>
   <section style="height: 100vh;" class="u-align-center u-clearfix u-custom-color-2 u-section-1" id="sec-58b6">
     <div class="u-clearfix u-sheet u-sheet-1">
