@@ -33,6 +33,22 @@ INSERT INTO `banks` (`id`, `username`, `balance`, `updated_at`, `created_at`) VA
 	(1, 'Eronax', 173554, '2021-07-20 14:30:32', '2021-07-20 14:29:33');
 /*!40000 ALTER TABLE `banks` ENABLE KEYS */;
 
+-- Exportiere Struktur von Tabelle dijk_vtc.bans
+CREATE TABLE IF NOT EXISTS `bans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` tinytext NOT NULL,
+  `banned_by` tinytext NOT NULL,
+  `ban_reason` text NOT NULL,
+  `ban_expires` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Exportiere Daten aus Tabelle dijk_vtc.bans: ~0 rows (ungefähr)
+/*!40000 ALTER TABLE `bans` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bans` ENABLE KEYS */;
+
 -- Exportiere Struktur von Tabelle dijk_vtc.cities
 CREATE TABLE IF NOT EXISTS `cities` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -479,7 +495,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `FK_users_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.users: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.users: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `status_color`, `information`, `last_online`, `updated_at`, `created_at`) VALUES
 	(1, 'Eronax', 'admin', 4, 'Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#ffffff', 'I am working for van dijk b.v!', '2021-07-20 14:44:08', '2021-07-20 14:44:08', '2021-07-20 14:29:16');
