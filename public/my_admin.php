@@ -11,7 +11,11 @@ include '../app/database.php';
 include '../app/config.php';
 
 $username = $_SESSION["name"];
-ping_database($username, $con);
 
+$get_tokens = get_tokens($con);
+
+$string = getName(10);
+
+ping_database($username, $con);
 
 require '../views/my_admin.view.php';

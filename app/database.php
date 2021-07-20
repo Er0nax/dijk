@@ -101,17 +101,6 @@ function get_profile_information($con, $current_id)
     return $get_profile_information;
 }
 
-
-function all_user_jobs($con, $username)
-{
-    $query = "SELECT jobs.id, jobs.income, jobs.distance, jobs.cargo
-    FROM jobs
-    WHERE jobs.username='$username'";
-    $all_user_jobs = $con->query($query);
-
-    return $all_user_jobs;
-}
-
 function check_user_perms($con, $username)
 {
     $query = "SELECT roles.perms
@@ -230,9 +219,53 @@ function time_ago($datetime, $full = false)
 
 function ping_database($username, $con)
 {
-    $sql= "UPDATE users SET last_online=NOW() WHERE username='$username'";
+    $sql = "UPDATE users SET last_online=NOW() WHERE username='$username'";
     if (mysqli_query($con, $sql)) {
     } else {
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
     }
+}
+
+function getName($n)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+
+    for ($i = 0; $i < $n; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $randomString .= $characters[$index];
+    }
+
+    return $randomString;
+}
+
+function insert_token($string, $con)
+{
+
+    $sql = "INSERT INTO tokens (token) VALUES ('$string')";
+    if (mysqli_query($con, $sql)) {
+        # log
+    } else {
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
+    }
+}
+
+function all_user_jobs($con, $username)
+{
+    $query = "SELECT jobs.id, jobs.income, jobs.distance, jobs.cargo
+    FROM jobs
+    WHERE jobs.username='$username'";
+    $all_user_jobs = $con->query($query);
+
+    return $all_user_jobs;
+}
+
+function get_tokens($con)
+{
+    $query = "SELECT id, token, used, created_at 
+    FROM tokens
+    WHERE used=0";
+    $get_tokens = $con->query($query);
+
+    return $get_tokens;
 }

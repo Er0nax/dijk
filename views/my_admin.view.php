@@ -64,7 +64,23 @@
       </div>
       <div class="u-container-style u-custom-color-1 u-group u-shape-rectangle u-group-1">
         <div class="u-container-layout u-container-layout-1">
-          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-1">Register Tokens:</h5>
+          <h5 class="u-align-center u-custom-font u-font-raleway u-text u-text-1">Register Tokens: <button type="button" data-href="../app/classes/generate_token.php">Generate Token</button></h5>
+
+          <table style="width:100%">
+            <tr>
+              <th style="width: 100px; text-align:center">ID</th>
+              <th style="width: 100px; text-align:center">Token</th>
+              <th style="width: 100px; text-align:center">Created</th>
+            </tr>
+
+            <?php while ($token = $get_tokens->fetch_assoc()) : ?>
+              <tr>
+                <td style="width: 100px; text-align:center"><?php echo $token['id'] ?></td>
+                <td style="width: 100px; text-align:center"><?php echo $token['token'] ?></td>
+                <td style="width: 100px; text-align:center"><?php echo $token['created_at'] ?></td>
+              </tr>
+            <?php endwhile; ?>
+          </table>
         </div>
       </div>
     </div>
