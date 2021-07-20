@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.banks: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.banks: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `banks` DISABLE KEYS */;
 INSERT INTO `banks` (`id`, `username`, `balance`, `updated_at`, `created_at`) VALUES
 	(1, 'Eronax', 173554, '2021-07-20 14:30:32', '2021-07-20 14:29:33');
@@ -394,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.news: ~0 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.news: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
 INSERT INTO `news` (`id`, `username`, `title`, `body`, `updated_at`, `created_at`) VALUES
 	(1, 'Eronax', 'Website early alpha <b>version published!</b>', 'We\'ve been at a point where it\'s save to say that we can publish our website. Thanks to everyone who helped out while building this project!', '2021-07-20 14:36:10', '2021-07-20 09:58:14');
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.roles: ~16 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.roles: ~18 rows (ungefähr)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`id`, `perms`, `name`, `color`, `updated_at`, `timestamp`) VALUES
 	(1, 100, 'Chief Executive Officer', '#FF0000', '2021-07-20 14:43:18', '2021-06-29 15:38:39'),
@@ -498,7 +498,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Exportiere Daten aus Tabelle dijk_vtc.users: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `status_color`, `information`, `last_online`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'admin', 4, 'Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#ffffff', 'I am working for van dijk b.v!', '2021-07-20 14:44:08', '2021-07-20 14:44:08', '2021-07-20 14:29:16');
+	(1, 'Eronax', 'admin', 4, 'Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#ffffff', 'I am working for van dijk b.v!', '2021-07-20 15:04:32', '2021-07-20 15:04:32', '2021-07-20 14:29:16');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
