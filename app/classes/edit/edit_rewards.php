@@ -1,5 +1,5 @@
 <?php
-include "$_SERVER[DOCUMENT_ROOT]/app/classes/config.php";
+include "$_SERVER[DOCUMENT_ROOT]/app/config.php";
 
 session_start();
 

@@ -9,7 +9,7 @@ session_start();
 include '../app/classes/information.php';
 include '../app/classes/paths.php';
 include '../app/database.php';
-include '../app/classes/config.php';
+include '../app/config.php';
 
 $all_users = get_all_users($con);
 

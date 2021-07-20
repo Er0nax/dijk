@@ -8,7 +8,7 @@ session_start();
 include '../app/classes/information.php';
 include '../app/classes/paths.php';
 include '../app/database.php';
-include '../app/classes/config.php';
+include '../app/config.php';
 
 if (isset($_GET['id'])) {
     $current_id = $_GET['id'];

@@ -9,7 +9,7 @@ session_start();
 include '../app/classes/information.php';
 include '../app/classes/paths.php';
 include '../app/database.php';
-include '../app/classes/config.php';
+include '../app/config.php';
 
 $username = $_SESSION['name'];
 $all_user_jobs = all_user_jobs($con, $username);

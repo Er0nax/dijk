@@ -47,7 +47,7 @@
                     <h5 style="width: 80%; text-align: right" class="u-custom-font u-font-raleway u-text u-text-3"><span style="color: <?php echo $get_profile_information['role_color'] ?>;"><?php echo $get_profile_information['role_name'] ?></span></h5>
                     <h5 style="width: 20%;" class="u-custom-font u-font-raleway u-text u-text-4">Role:</h5>
 
-                    <h5 style="width: 80%; text-align: right" class="u-custom-font u-font-raleway u-text u-text-3"><?php if (strtotime($display_last_online) > time() - 300) : ?>
+                    <h5 style="width: 80%; text-align: right" class="u-custom-font u-font-raleway u-text u-text-3"><?php if (strtotime($display_last_online) > time() - 180) : ?>
                         <span class="online" style="color:lightgreen;">Currently Online</span>
                       <?php else : ?>
                         <span class="offline" style="color:red;"><?php echo $display_last_online; ?></span>
