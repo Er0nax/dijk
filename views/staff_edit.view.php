@@ -23,7 +23,7 @@
         <form action="../app/classes/staff_edit.php?id=<?php echo $all_user_information['id'] ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-label">Password:</label>
-            <input type="password" value="<?php echo $all_user_information['password'] ?>" id="name-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 100) { ?> disabled <?php } ?>>
+            <input type="password" value="<?php echo $all_user_information['password'] ?>" id="name-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 99) { ?> disabled <?php } ?>>
           </div>
           <br>
           <div class="u-form-group u-form-name">
@@ -60,12 +60,12 @@
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Balance</label>
-            <input type="text" value="<?php echo $all_user_information['balance'] ?>" id="text-8b2a" name="balance" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+            <input type="text" value="<?php echo $all_user_information['balance'] ?>" id="text-8b2a" name="balance" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 89) { ?> disabled <?php } ?>>
           </div>
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Custom Status</label>
-            <input type="text" value="<?php echo $all_user_information['status'] ?>" id="text-8b2a" name="status" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 90) { ?> disabled <?php } ?>>
+            <input type="text" value="<?php echo $all_user_information['status'] ?>" id="text-8b2a" name="status" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 89) { ?> disabled <?php } ?>>
           </div>
           <br>
           <div class="u-form-email u-form-group">
@@ -89,7 +89,7 @@
           </div>
         </form>
 
-        <?php if ($get_user_perms_edit['perms'] > 100) { ?>
+        <?php if ($get_user_perms_edit['perms'] > 99) { ?>
           <button class="button_blue" style="vertical-align:middle; width: 200px; background-color: lightgreen;" data-href="../app/classes/approve.php?id=<?php echo $_GET['id'] ?>"><span>Approve</span></button>
           <button class="button_blue" style="vertical-align:middle; width: 200px; background-color: red;" data-href="../app/classes/unapprove.php?id=<?php echo $_GET['id'] ?>"><span>Unapprove</span></button>
         <?php } ?>

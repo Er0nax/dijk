@@ -25,7 +25,7 @@ $list_all_roles = list_all_roles($con);
 
 // check perms
 
-if($get_user_perms_edit['perms'] < 70) {
+if($get_user_perms_edit['perms'] < 69) {
     header('Location: ../public/profile.php');
     exit;
 }

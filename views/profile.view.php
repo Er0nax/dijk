@@ -36,7 +36,7 @@
                         echo '<button class="button_blue" style="vertical-align:middle" data-href="../public/edit.php"><span>Edit</span></button>';
                       } ?>
 
-                      <?php if ($get_user_perms['perms'] > 70) { ?>
+                      <?php if ($get_user_perms['perms'] > 69) { ?>
                         <button class="button_red" style="vertical-align:middle" data-href="../public/staff_edit.php?id=<?php echo $get_profile_information['id']; ?>"><span>Edit</span></button>
                       <?php
                       } ?>
