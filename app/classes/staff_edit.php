@@ -15,12 +15,12 @@ $discord = mysqli_real_escape_string($con, $_REQUEST['discord']);
 $truckersmp = mysqli_real_escape_string($con, $_REQUEST['truckersmp']);
 $information = mysqli_real_escape_string($con, $_REQUEST['information']);
 $user_pb = mysqli_real_escape_string($con, $_REQUEST['user_pb']);
-$status_color = mysqli_real_escape_string($con, $_REQUEST['status_color']);
+$information_color = mysqli_real_escape_string($con, $_REQUEST['information_color']);
 $balance = mysqli_real_escape_string($con, $_REQUEST['balance']);
 $level = mysqli_real_escape_string($con, $_REQUEST['level']);
 $status = mysqli_real_escape_string($con, $_REQUEST['status']);
 
-$sql_edit_users = "UPDATE users SET password='$password', discord='$discord', status='$status', role_id='$role_id', truckersmp='$truckersmp', information='$information', user_pb='$user_pb', status_color='$status_color' WHERE id='$editeduser'";
+$sql_edit_users = "UPDATE users SET password='$password', discord='$discord', status='$status', role_id='$role_id', truckersmp='$truckersmp', information='$information', user_pb='$user_pb', information_color='$information_color' WHERE id='$editeduser'";
 if (mysqli_query($con, $sql_edit_users)) {
     // log
     $sql_edit_banks = "UPDATE banks SET balance='$balance' WHERE id='$editeduser'";

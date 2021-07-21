@@ -43,7 +43,7 @@
           <br>
           <div class="u-form-group u-form-name">
           <label for="name-3b9a" class="u-label">Status Color:</label>
-            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="name-3b9a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
+            <input type="color" value="<?php echo $all_user_information['information_color'] ?>" id="name-3b9a" name="information_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1">
           </div>
           <br>
           <div class="u-form-group u-form-name">

@@ -10,7 +10,7 @@ if (session_status() == PHP_SESSION_NONE) {
 function get_user_information($con, $username)
 {
 
-    $query = "SELECT users.id, users.username, users.user_pb, users.information, users.status_color, banks.balance AS 'balance', roles.name AS 'role', levels.`level` AS 'level', roles.color AS 'role_color', roles.perms
+    $query = "SELECT users.id, users.username, users.user_pb, users.information, users.information_color, banks.balance AS 'balance', roles.name AS 'role', levels.`level` AS 'level', roles.color AS 'role_color', roles.perms
               FROM users
               JOIN banks ON users.id=banks.id
               JOIN roles ON users.role_id=roles.id
@@ -89,7 +89,7 @@ function get_all_users($con)
 
 function get_profile_information($con, $current_id)
 {
-    $query = "SELECT users.id, users.last_online, users.password, users.role_id AS 'roleid', users.username, users.status, tokens.token, users.discord, users.truckersmp, users.user_pb, users.status_color, users.information, users.created_at, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', levels.level, banks.balance, roles.perms AS 'perms'
+    $query = "SELECT users.id, users.last_online, users.password, users.role_id AS 'roleid', users.username, users.status, tokens.token, users.discord, users.truckersmp, users.user_pb, users.information_color, users.information, users.created_at, roles.id AS 'role_id', roles.name AS 'role_name', roles.color AS 'role_color', levels.level, banks.balance, roles.perms AS 'perms'
     FROM users
     JOIN roles ON users.role_id=roles.id
     JOIN levels ON users.id=levels.id

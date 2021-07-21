@@ -75,7 +75,7 @@
           <br>
           <div class="u-form-group u-form-group-3">
             <label for="text-8b2a" class="u-label">Status Color:</label>
-            <input type="color" value="<?php echo $all_user_information['status_color'] ?>" id="text-8b2a" name="status_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
+            <input type="color" value="<?php echo $all_user_information['information_color'] ?>" id="text-8b2a" name="information_color" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>
           <br>
           <div class="u-form-group u-form-group-3">

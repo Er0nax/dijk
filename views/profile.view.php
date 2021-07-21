@@ -44,7 +44,7 @@
                       } ?>
 
                     </h2>
-                    <p class="u-custom-font u-font-raleway u-text u-text-2"><span style="color: <?php echo $get_profile_information['status_color'] ?>;"><?php echo $get_profile_information['information'] ?></span></p>
+                    <p class="u-custom-font u-font-raleway u-text u-text-2"><span style="color: <?php echo $get_profile_information['information_color'] ?>;"><?php echo $get_profile_information['information'] ?></span></p>
                     <div class="u-border-1 u-border-custom-color-3 u-expanded-width u-line u-line-horizontal u-line-1"></div>
                     <h5 style="width: 80%; text-align: right" class="u-custom-font u-font-raleway u-text u-text-3"><span style="color: <?php echo $get_profile_information['role_color'] ?>;"><?php echo $get_profile_information['role_name'] ?></span></h5>
                     <h5 style="width: 20%;" class="u-custom-font u-font-raleway u-text u-text-4">Role:</h5>

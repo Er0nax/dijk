@@ -484,7 +484,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `discord` tinytext NOT NULL,
   `truckersmp` int(50) NOT NULL,
   `user_pb` text NOT NULL DEFAULT 'https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg',
-  `status_color` varchar(50) NOT NULL DEFAULT '#fffff',
+  `information_color` varchar(50) NOT NULL DEFAULT '#fffff',
   `information` text NOT NULL DEFAULT 'There is no information yet.',
   `last_online` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -497,7 +497,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Exportiere Daten aus Tabelle dijk_vtc.users: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `status_color`, `information`, `last_online`, `updated_at`, `created_at`) VALUES
+INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `information_color`, `information`, `last_online`, `updated_at`, `created_at`) VALUES
 	(1, 'Eronax', 'admin', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-21 10:28:56', '2021-07-21 10:28:56', '2021-07-21 10:24:27');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
