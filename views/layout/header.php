@@ -85,7 +85,7 @@ if (isset($_SESSION["name"])) {
                                         <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/my_admin.php">My Admin</a>
                                         </li>
                                     <?php } ?>
-                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
+                                    <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/drivers.php">Drivers</a>
                                     </li>
                                     <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../app/classes/logout.php">Logout</a>
                                     </li>
@@ -113,7 +113,7 @@ if (isset($_SESSION["name"])) {
                                                 <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/my_admin.php">Add News</a>
                                                 </li>
                                             <?php } ?>
-                                            <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/users.php">Drivers</a>
+                                            <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../public/drivers.php">Drivers</a>
                                             </li>
                                             <li class="u-nav-item"><a class="u-button-style u-custom-color-2 u-nav-link" href="../app/classes/logout.php">Logout</a>
                                             </li>

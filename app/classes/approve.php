@@ -13,7 +13,7 @@ $id = $_GET['id'];
 $sql = "UPDATE users SET status='Verified' WHERE id='$id'";
 if (mysqli_query($con, $sql)) {
     // log
-    header('Location: /public/users.php');
+    header('Location: /public/drivers.php');
     exit;
 } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);

@@ -19,7 +19,7 @@ $user_pb = mysqli_real_escape_string($con, $_REQUEST['user_pb']);
 $sql = "UPDATE users SET role_id='$role_id', discord='$discord', truckersmp='$truckersmp', information='$information', user_pb='$user_pb' WHERE id='$current_id'";
 if (mysqli_query($con, $sql)) {
     // log
-    header('Location: /public/users.php');
+    header('Location: /public/drivers.php');
     exit;
 } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);

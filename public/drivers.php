@@ -13,4 +13,4 @@ include '../app/config.php';
 
 $all_users = get_all_users($con);
 
-require '../views/users.view.php';
+require '../views/drivers.view.php';

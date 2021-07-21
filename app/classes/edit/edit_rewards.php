@@ -15,7 +15,7 @@ $level = mysqli_real_escape_string($con, $_REQUEST['level']);
 $sql = "UPDATE levels SET level='$level' WHERE id='$current_id'";
 if (mysqli_query($con, $sql)) {
     // log
-    header('Location: /public/users.php');
+    header('Location: /public/drivers.php');
     exit;
 } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);

@@ -17,7 +17,7 @@ $second_button_name = 'Truckers MP';
 $second_button_link = 'https://truckersmp.com/vtc/39605';
 
 $third_button_name = 'Drivers';
-$third_button_link = '../public/users.php';
+$third_button_link = '../public/drivers.php';
 
     // 3 Categories Block (from left to right)
 

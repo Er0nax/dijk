@@ -18,7 +18,7 @@ $body = mysqli_real_escape_string($con, $_REQUEST['body']);
 // Attempt insert query execution
 $sql_insert_jobs = "INSERT INTO news (username, title, body) VALUES ('$username', '$title', '$body')";
 if (mysqli_query($con, $sql_insert_jobs)) {
-    header('Location: /public/users.php');
+    header('Location: /public/drivers.php');
     exit;
 } else {
     echo "ERROR: Could not able to execute $sql_insert_jobs. " . mysqli_error($con);

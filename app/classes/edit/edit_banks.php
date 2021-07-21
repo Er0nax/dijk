@@ -15,7 +15,7 @@ $balance = mysqli_real_escape_string($con, $_REQUEST['balance']);
 $sql = "UPDATE banks SET balance='$balance' WHERE id='$current_id'";
 if (mysqli_query($con, $sql)) {
     // log
-    header('Location: /public/users.php');
+    header('Location: /public/drivers.php');
     exit;
 } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);

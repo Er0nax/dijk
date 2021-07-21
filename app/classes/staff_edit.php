@@ -29,7 +29,7 @@ if (mysqli_query($con, $sql_edit_users)) {
         $sql_edit_level = "UPDATE levels SET level='$level' WHERE id='$editeduser'";
         if (mysqli_query($con, $sql_edit_level)) {
             // log
-            header('Location: /public/users.php');
+            header('Location: /public/drivers.php');
             exit;
         } else {
             echo "ERROR: Could not able to execute $sql_edit_level. " . mysqli_error($con);
