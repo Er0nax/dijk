@@ -5,10 +5,17 @@
 
 session_start();
 
+if (!isset($_SESSION["name"])) {
+    header('Location: ../public/index.php');
+    exit;
+}
+
 include '../app/classes/information.php';
 include '../app/classes/paths.php';
 include '../app/database.php';
 include '../app/config.php';
+
+if($_SESSION)
 
 $id = $_SESSION['id'];
 $all_user_information = get_all_user_information($con, $id);

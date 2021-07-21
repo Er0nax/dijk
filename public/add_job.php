@@ -10,6 +10,11 @@ include '../app/classes/paths.php';
 include '../app/database.php';
 include '../app/config.php';
 
+if (!isset($_SESSION["name"])) {
+    header('Location: ../public/index.php');
+    exit;
+}
+
 $get_all_trucks = get_all_trucks($con);
 $get_departure_city = get_departure_city($con);
 $get_destination_city = get_destination_city($con);

@@ -11,6 +11,11 @@ include '../app/classes/paths.php';
 include '../app/database.php';
 include '../app/config.php';
 
+if (!isset($_SESSION["name"])) {
+    header('Location: ../public/index.php');
+    exit;
+}
+
 $username = $_SESSION['name'];
 $all_user_jobs = all_user_jobs($con, $username);
 

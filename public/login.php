@@ -8,6 +8,7 @@ session_start();
 include_once '../app/classes/information.php';
 include_once '../app/classes/paths.php';
 
+/*
 if (isset($_COOKIE['username_cookie'])) {
     if (isset($_COOKIE['password_cookie'])) {
         # Username and Password are set.
@@ -16,5 +17,6 @@ if (isset($_COOKIE['username_cookie'])) {
         exit;
     }
 }
+*/
 
 require '../views/login.view.php';

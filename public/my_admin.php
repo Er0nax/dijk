@@ -10,6 +10,13 @@ include '../app/classes/paths.php';
 include '../app/database.php';
 include '../app/config.php';
 
+if (!isset($_SESSION["name"])) {
+    if ($get_user_perms_edit['perms'] < 89) {
+        header('Location: ../public/index.php');
+        exit;
+    }
+}
+
 $username = $_SESSION["name"];
 
 $get_tokens = get_tokens($con);

@@ -1,7 +1,7 @@
 <?php
 
 # check if cookie is avaiable and use it.
-
+/*
 if (isset($_COOKIE['username_cookie'])) {
 	if (isset($_COOKIE['password_cookie'])) {
 		if ($_COOKIE["username_cookie"] != null) {
@@ -10,6 +10,7 @@ if (isset($_COOKIE['username_cookie'])) {
 		}
 	}
 }
+*/
 
 
 include "$_SERVER[DOCUMENT_ROOT]/app/config.php";
@@ -44,8 +45,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
 			$_SESSION['id'] = $id;
 			$username = $_SESSION["name"];
 
-			setcookie('username_cookie', $username, time() + (86400 * 30), "/");
-			setcookie("password_cookie", $password, time() + (86400 * 30), "/");
+			setcookie('username_cookie', $_POST['username'], time() + (86400 * 30), "/");
+			setcookie("password_cookie", $_POST['password'], time() + (86400 * 30), "/");
 			// log
 
 			$sql_update_users = "UPDATE users SET last_online=NOW() WHERE username='$username'";

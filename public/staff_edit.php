@@ -25,6 +25,11 @@ $list_all_roles = list_all_roles($con);
 
 // check perms
 
+if (!isset($_SESSION["name"])) {
+    header('Location: ../public/index.php');
+    exit;
+}
+
 if($get_user_perms_edit['perms'] < 69) {
     header('Location: ../public/profile.php');
     exit;
