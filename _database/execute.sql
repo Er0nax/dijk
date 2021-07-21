@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
 -- Exportiere Daten aus Tabelle dijk_vtc.banks: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `banks` DISABLE KEYS */;
 INSERT INTO `banks` (`id`, `username`, `balance`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 173554, '2021-07-20 14:30:32', '2021-07-20 14:29:33');
+	(1, 'Eronax', 0, '2021-07-21 10:24:27', '2021-07-21 10:24:27');
 /*!40000 ALTER TABLE `banks` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.bans
@@ -358,14 +358,10 @@ CREATE TABLE IF NOT EXISTS `jobs` (
   PRIMARY KEY (`id`),
   KEY `FK_jobs_trucks` (`truck_id`),
   CONSTRAINT `FK_jobs_trucks` FOREIGN KEY (`truck_id`) REFERENCES `trucks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.jobs: ~3 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.jobs: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
-INSERT INTO `jobs` (`id`, `user_id`, `username`, `departure_id`, `destination_id`, `truck_id`, `cargo`, `income`, `distance`, `admin`, `evidence`, `timestamp`) VALUES
-	(1, 1, 'Eronax', 20, 70, 5, 'Potatos', 92485, 1593, '', 'I\'m an admin. I don\'t need any evidence.', '2021-07-20 14:20:19'),
-	(2, 1, 'Eronax', 209, 120, 1, 'Water', 48535, 948, '', 'Admin again ;)', '2021-07-20 14:21:28'),
-	(3, 1, 'Eronax', 7, 215, 2, 'Chips', 32534, 586, '', 'test', '2021-07-20 14:30:32');
 /*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.levels
@@ -380,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `levels` (
 -- Exportiere Daten aus Tabelle dijk_vtc.levels: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `levels` DISABLE KEYS */;
 INSERT INTO `levels` (`id`, `username`, `level`, `timestamp`) VALUES
-	(1, 'Eronax', 0, '2021-07-20 14:29:16');
+	(1, 'Eronax', 0, '2021-07-21 10:24:27');
 /*!40000 ALTER TABLE `levels` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.news
@@ -394,10 +390,10 @@ CREATE TABLE IF NOT EXISTS `news` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.news: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.news: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
 INSERT INTO `news` (`id`, `username`, `title`, `body`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'Website early alpha <b>version published!</b>', 'We\'ve been at a point where it\'s save to say that we can publish our website. Thanks to everyone who helped out while building this project!', '2021-07-20 14:36:10', '2021-07-20 09:58:14');
+	(1, 'Eronax', 'DriversHub is now in public beta!', 'We\'ve been working hard on the website lately and we\'re now are a point where we can show our dashboard to our drivers. Much work has been put into it, so please contact us if you found any bugs or mistakes!', '2021-07-21 10:28:41', '2021-07-21 10:28:41');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.roles
@@ -409,29 +405,33 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.roles: ~18 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.roles: ~22 rows (ungefähr)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`id`, `perms`, `name`, `color`, `updated_at`, `timestamp`) VALUES
-	(1, 100, 'Chief Executive Officer', '#FF0000', '2021-07-20 14:43:18', '2021-06-29 15:38:39'),
-	(2, 100, 'Chief Operating Officer', '#FF0202', '2021-07-20 14:43:19', '2021-06-29 15:38:57'),
-	(3, 90, 'General Manager', '#2B1435', '2021-07-20 14:43:21', '2021-06-29 15:38:25'),
-	(4, 100, 'Developer', '#9159ff', '2021-07-20 14:43:23', '2021-07-19 11:18:28'),
-	(5, 80, 'Human Resources', '#ffc4ea', '2021-07-20 14:43:25', '2021-06-29 15:39:02'),
-	(6, 80, 'Community Moderation Manager', '#a2371c', '2021-07-20 14:43:27', '2021-06-29 15:42:51'),
-	(7, 60, 'Media Manager', '#184f80', '2021-07-20 14:43:29', '2021-06-29 15:42:41'),
-	(8, 60, 'Event Manager', '#d34923', '2021-07-20 14:43:31', '2021-06-29 15:39:13'),
-	(9, 60, 'Event Manager', '#00ff8b', '2021-07-20 14:43:33', '2021-06-29 15:42:35'),
-	(10, 50, 'Community Moderator', '#ffe400', '2021-07-20 14:43:35', '2021-06-29 15:42:58'),
-	(11, 40, 'Recruiting Team', '#c4996c', '2021-07-20 14:43:37', '2021-06-29 15:43:06'),
-	(12, 30, 'Event Team', '#49ca75', '2021-07-20 14:43:39', '2021-06-29 15:43:10'),
-	(13, 30, 'Media Team', '#3f6d95', '2021-07-20 14:43:42', '2021-06-29 15:43:16'),
-	(14, 30, 'Social Media Manager', '#970045', '2021-07-20 14:43:44', '2021-06-29 15:43:20'),
-	(15, 10, 'Driver of the Month', '#ff9c00', '2021-07-20 14:43:54', '2021-06-29 15:43:26'),
-	(16, 20, 'Partner', '#609e8e', '2021-07-20 14:43:49', '2021-06-29 15:43:31'),
-	(17, 10, 'Driver', '#831f18', '2021-07-20 14:43:57', '2021-06-29 15:43:35'),
-	(18, 0, 'User', '#00aaff', '2021-07-20 14:31:22', '2021-06-29 15:43:40');
+	(1, 100, 'Chief Executive Officer', '#d60000', '2021-07-21 10:15:46', '2021-07-21 10:15:46'),
+	(2, 100, 'Chief Operating Officer', '#ff0202', '2021-07-21 10:16:04', '2021-07-21 10:16:04'),
+	(3, 90, 'General Manager', '#8900c5', '2021-07-21 10:16:18', '2021-07-21 10:16:17'),
+	(4, 100, 'Developer', '#9159ff', '2021-07-21 10:16:27', '2021-07-21 10:16:27'),
+	(5, 80, 'Human Resources', '#ffcbec', '2021-07-21 10:16:39', '2021-07-21 10:16:39'),
+	(6, 70, 'Community Moderation Manager', '#cab200', '2021-07-21 10:17:01', '2021-07-21 10:17:01'),
+	(7, 60, 'Media Manager', '#0042c0', '2021-07-21 10:17:13', '2021-07-21 10:17:12'),
+	(8, 60, 'Event Manager', '#00c744', '2021-07-21 10:17:26', '2021-07-21 10:17:21'),
+	(9, 50, 'Community Moderator', '#ffe400', '2021-07-21 10:17:41', '2021-07-21 10:17:41'),
+	(10, 40, 'Recruiting Team', '#fd8300', '2021-07-21 10:17:55', '2021-07-21 10:17:55'),
+	(11, 40, 'Event Team', '#00ff56', '2021-07-21 10:18:08', '2021-07-21 10:18:08'),
+	(12, 40, 'Media Team', '#0058ff', '2021-07-21 10:18:21', '2021-07-21 10:18:21'),
+	(13, 40, 'Social Media Team', '#ff0075', '2021-07-21 10:18:43', '2021-07-21 10:18:34'),
+	(14, 40, 'Dispatcher', '#d40033', '2021-07-21 10:18:58', '2021-07-21 10:18:58'),
+	(15, 30, 'Driver of the Month', '#46c3ff', '2021-07-21 10:19:12', '2021-07-21 10:19:12'),
+	(16, 20, 'Driver', '#007cb6', '2021-07-21 10:19:32', '2021-07-21 10:19:32'),
+	(17, 10, 'Picture of the Month', '#00ffab', '2021-07-21 10:19:47', '2021-07-21 10:19:47'),
+	(18, 10, 'Partner', '#00ad74', '2021-07-21 10:20:18', '2021-07-21 10:20:03'),
+	(19, 10, 'Retired Driver', '#1b88bd', '2021-07-21 10:22:08', '2021-07-21 10:20:31'),
+	(20, 10, 'Server Booster', '#f47fff', '2021-07-21 10:22:07', '2021-07-21 10:20:50'),
+	(21, 0, 'TruckersMp Staff', '#91c758', '2021-07-21 10:21:51', '2021-07-21 10:21:01'),
+	(22, 0, 'Public', '#00aaff', '2021-07-21 10:22:03', '2021-07-21 10:21:30');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.tokens
@@ -450,7 +450,7 @@ CREATE TABLE IF NOT EXISTS `tokens` (
 -- Exportiere Daten aus Tabelle dijk_vtc.tokens: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
 INSERT INTO `tokens` (`id`, `token`, `used`, `used_by`, `used_at`, `created_at`) VALUES
-	(1, '8nPETbzuoJ1DhzitFev6', 1, 'Eronax', '2021-07-20 14:29:16', '2021-07-20 14:27:49');
+	(1, '36537775963289104248', 1, 'Eronax', '2021-07-21 10:24:27', '2021-07-21 10:23:50');
 /*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.trucks
@@ -479,7 +479,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` tinytext NOT NULL,
   `password` tinytext NOT NULL,
-  `role_id` int(11) NOT NULL DEFAULT 18,
+  `role_id` int(11) NOT NULL DEFAULT 22,
   `status` tinytext NOT NULL DEFAULT 'Not Verified',
   `discord` tinytext NOT NULL,
   `truckersmp` int(50) NOT NULL,
@@ -495,10 +495,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `FK_users_roles` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.users: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.users: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `status_color`, `information`, `last_online`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'admin', 4, 'Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#ffffff', 'I am working for van dijk b.v!', '2021-07-20 15:04:32', '2021-07-20 15:04:32', '2021-07-20 14:29:16');
+	(1, 'Eronax', 'admin', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-21 10:28:56', '2021-07-21 10:28:56', '2021-07-21 10:24:27');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
