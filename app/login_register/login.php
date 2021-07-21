@@ -4,11 +4,10 @@
 
 if (isset($_COOKIE['username_cookie'])) {
 	if (isset($_COOKIE['password_cookie'])) {
-
-		# Username and Password are set.
-		# $_COOKIE["username_cookie"];
-		$_POST['username'] = $_COOKIE['username_cookie'];
-		$_POST['password'] = $_COOKIE['password_cookie'];
+		if ($_COOKIE["username_cookie"] != null) {
+			$_POST['username'] = $_COOKIE['username_cookie'];
+			$_POST['password'] = $_COOKIE['password_cookie'];
+		}
 	}
 }
 

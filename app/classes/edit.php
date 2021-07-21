@@ -16,7 +16,7 @@ $information = mysqli_real_escape_string($con, $_REQUEST['information']);
 $user_pb = mysqli_real_escape_string($con, $_REQUEST['user_pb']);
 $information_color = mysqli_real_escape_string($con, $_REQUEST['information_color']);
 
-$sql = "UPDATE users SET password='$password', discord='$discord', truckersmp='$truckersmp', information='$information', user_pb='$user_pb', information_color='$information_color', updated_at=NOW() WHERE username='$editeduser'";
+$sql = "UPDATE users SET password='$password', updated_at=NOW(), discord='$discord', truckersmp='$truckersmp', information='$information', user_pb='$user_pb', information_color='$information_color', updated_at=NOW() WHERE username='$editeduser'";
 if (mysqli_query($con, $sql)) {
     // log
     header('Location: /public/profile.php');

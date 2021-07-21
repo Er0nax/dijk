@@ -229,7 +229,7 @@ function ping_database($username, $con)
 
 function getName($n)
 {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters = '0123456789';
     $randomString = '';
 
     for ($i = 0; $i < $n; $i++) {
