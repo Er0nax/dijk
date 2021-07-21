@@ -1,4 +1,18 @@
 <?php
+
+# check if cookie is avaiable and use it.
+
+if (isset($_COOKIE['username_cookie'])) {
+	if (isset($_COOKIE['password_cookie'])) {
+
+		# Username and Password are set.
+		# $_COOKIE["username_cookie"];
+		$_POST['username'] = $_COOKIE['username_cookie'];
+		$_POST['password'] = $_COOKIE['password_cookie'];
+	}
+}
+
+
 include "$_SERVER[DOCUMENT_ROOT]/app/config.php";
 
 session_start();
@@ -30,6 +44,9 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
 			$_SESSION['name'] = $_POST['username'];
 			$_SESSION['id'] = $id;
 			$username = $_SESSION["name"];
+
+			setcookie('username_cookie', $username, time() + (86400 * 30), "/");
+			setcookie("password_cookie", $password, time() + (86400 * 30), "/");
 			// log
 
 			$sql_update_users = "UPDATE users SET last_online=NOW() WHERE username='$username'";
@@ -40,7 +57,6 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
 			} else {
 				echo "ERROR: Could not able to execute $sql_update_users. " . mysqli_error($con);
 			}
-
 		} else {
 			// Incorrect password
 ?><script>

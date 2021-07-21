@@ -11,7 +11,7 @@
 </head>
 
 <body class="u-body">
-<?php include($header); ?>
+  <?php include($header); ?>
   <section class="skrollable u-clearfix u-image u-section-1" id="sec-0629" data-image-width="1920" data-image-height="1080">
     <div class="u-clearfix u-sheet u-sheet-1">
       <div class="u-align-center u-container-style u-custom-color-2 u-group u-radius-10 u-shape-round u-group-1">
@@ -19,7 +19,8 @@
           <h3 class="u-custom-font u-font-raleway u-text u-text-1"><?php echo $get_news['title'] ?></h3>
           <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1" data-animation-name="lightSpeedIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction=""></div>
           <h5 class="u-custom-font u-font-raleway u-text u-text-2"><?php echo $get_news['body'] ?></h5>
-          <h6 style="padding-bottom: 20px; text-align: center; color: lightgrey;" class="u-align-left u-custom-font u-font-raleway u-text u-text-3">by <a href="../public/profile.php?id=<?php echo $get_news['user_id'] ?>" style="color: <?php echo $get_news['color'] ?>;"> <?php echo $get_news['username'] ?></a></h6>        </div>
+          <h6 style="padding-bottom: 20px; text-align: center; color: lightgrey;" class="u-align-left u-custom-font u-font-raleway u-text u-text-3">by <a href="../public/profile.php?id=<?php echo $get_news['user_id'] ?>" style="color: <?php echo $get_news['color'] ?>;"> <?php echo $get_news['username'] ?></a></h6>
+        </div>
       </div>
       <a style="width: 200px;" href="<?php echo $second_button_link ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><?php echo $second_button_name; ?></a>
       <a style="width: 200px;" href="<?php echo $third_button_link ?>" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-font-raleway u-hover-custom-color-2 u-radius-6 u-btn-2" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down"><?php echo $third_button_name; ?></a>
