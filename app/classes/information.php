@@ -41,7 +41,7 @@ $block_button_link = $discord; // replace everything after the = with '<link>' f
 
 // ---------- Footer ----------
 
-$footertitle = 'Copyright by Van Dijk B.V and their Owners. Created with love by <a style="color: lightgreen;" href="../public/profile.php?id=1">Eronax</a>';
+$footertitle = 'Copyright by Van Dijk B.V and their Owners. Created with love by <a href="../public/profile.php?id=1">Eronax</a>';
 
 
 

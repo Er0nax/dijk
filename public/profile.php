@@ -22,7 +22,7 @@ if (!isset($_GET['id'])) { // if there is no ID in the URL, use the "logged user
     $_GET['id'] = $_SESSION['id'];
 }
 
-$current_id = $_GET['id']; // get ID from URL
+$current_id = $_GET['id']; // get ID 
 
 $get_user_perms = check_user_perms($con, $username);
 $user_jobs_information = user_jobs_information($con, $current_id);
