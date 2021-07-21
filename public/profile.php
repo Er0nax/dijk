@@ -14,15 +14,15 @@ if (isset($_SESSION['id'])) {
     $userid = $_SESSION['id'];
     $username = $_SESSION['name'];
 } else { // login as guest
-    $userid = "16";
-    $username = "Guest";
+    header('Location: ../public/index.php');
+    exit;
 }
 
 if (!isset($_GET['id'])) { // if there is no ID in the URL, use the "logged user id"
     $_GET['id'] = $_SESSION['id'];
 }
 
-$current_id = $_GET['id']; // get ID 
+$current_id = $_GET['id']; // get ID from URL
 
 $get_user_perms = check_user_perms($con, $username);
 $user_jobs_information = user_jobs_information($con, $current_id);
