@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
 
 /*!40000 ALTER TABLE `banks` DISABLE KEYS */;
 INSERT INTO `banks` (`id`, `username`, `balance`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 0, '2021-07-22 10:08:46', '2021-07-22 08:29:39');
+	(1, 'admin', 0, '2021-07-22 10:29:56', '2021-07-22 08:29:39');
 /*!40000 ALTER TABLE `banks` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `bans` (
@@ -355,7 +355,7 @@ CREATE TABLE IF NOT EXISTS `levels` (
 
 /*!40000 ALTER TABLE `levels` DISABLE KEYS */;
 INSERT INTO `levels` (`id`, `username`, `level`, `timestamp`) VALUES
-	(1, 'Eronax', 0, '2021-07-22 08:29:39');
+	(1, 'admin', 0, '2021-07-22 10:29:50');
 /*!40000 ALTER TABLE `levels` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `news` (
@@ -370,7 +370,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
 INSERT INTO `news` (`id`, `username`, `title`, `body`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'DriversHub is now in public beta!', 'We\'ve been working hard on the website lately and we\'re now are a point where we can show our dashboard to our drivers. Much work has been put into it, so please contact us if you found any bugs or mistakes!', '2021-07-21 10:28:41', '2021-07-21 10:28:41');
+	(1, 'admin', 'DriversHub is now in public beta!', 'We\'ve been working hard on the website lately and we\'re now are a point where we can show our dashboard to our drivers. Much work has been put into it, so please contact us if you found any bugs or mistakes!', '2021-07-22 10:29:46', '2021-07-21 10:28:41');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `roles` (
@@ -422,7 +422,7 @@ CREATE TABLE IF NOT EXISTS `tokens` (
 
 /*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
 INSERT INTO `tokens` (`id`, `token`, `used`, `used_by`, `used_at`, `created_at`) VALUES
-	(1, '127', 1, 'Eronax', '2021-07-22 08:29:39', '2021-07-22 08:28:52');
+	(1, '127', 1, 'admin', '2021-07-22 08:29:39', '2021-07-22 08:28:52');
 /*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `trucks` (
@@ -471,7 +471,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `information_color`, `information`, `last_online`, `role_update`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'admin007', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-22 10:27:31', '2021-07-22 08:29:39', '2021-07-22 08:29:39', '2021-07-22 08:29:39');
+	(1, 'admin', 'admin', 1, 'Not Verified', 'admin#0001', 1, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-22 10:30:51', '2021-07-22 08:29:39', '2021-07-22 08:29:39', '2021-07-22 08:29:39');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
