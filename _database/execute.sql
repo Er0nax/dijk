@@ -500,7 +500,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Exportiere Daten aus Tabelle dijk_vtc.users: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `information_color`, `information`, `last_online`, `role_update`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'admin007', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-22 08:29:59', '2021-07-22 08:29:39', '2021-07-22 08:29:39', '2021-07-22 08:29:39');
+	(1, 'Eronax', 'admin', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-22 08:29:59', '2021-07-22 08:29:39', '2021-07-22 08:29:39', '2021-07-22 08:29:39');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
