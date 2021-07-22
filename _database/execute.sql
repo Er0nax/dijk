@@ -20,6 +20,7 @@ USE `dijk_vtc`;
 -- Exportiere Struktur von Tabelle dijk_vtc.banks
 CREATE TABLE IF NOT EXISTS `banks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `balance` int(11) NOT NULL DEFAULT 0,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -27,10 +28,10 @@ CREATE TABLE IF NOT EXISTS `banks` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.banks: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.banks: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `banks` DISABLE KEYS */;
-INSERT INTO `banks` (`id`, `username`, `balance`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 0, '2021-07-21 10:24:27', '2021-07-21 10:24:27');
+INSERT INTO `banks` (`id`, `user_id`, `username`, `balance`, `updated_at`, `created_at`) VALUES
+	(1, 0, 'Eronax', 0, '2021-07-22 08:29:39', '2021-07-22 08:29:39');
 /*!40000 ALTER TABLE `banks` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.bans
@@ -373,10 +374,10 @@ CREATE TABLE IF NOT EXISTS `levels` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Exportiere Daten aus Tabelle dijk_vtc.levels: ~1 rows (ungefähr)
+-- Exportiere Daten aus Tabelle dijk_vtc.levels: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `levels` DISABLE KEYS */;
 INSERT INTO `levels` (`id`, `username`, `level`, `timestamp`) VALUES
-	(1, 'Eronax', 0, '2021-07-21 10:24:27');
+	(1, 'Eronax', 0, '2021-07-22 08:29:39');
 /*!40000 ALTER TABLE `levels` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.news
@@ -403,13 +404,13 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `name` varchar(50) NOT NULL,
   `color` varchar(50) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
 -- Exportiere Daten aus Tabelle dijk_vtc.roles: ~22 rows (ungefähr)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` (`id`, `perms`, `name`, `color`, `updated_at`, `timestamp`) VALUES
+INSERT INTO `roles` (`id`, `perms`, `name`, `color`, `updated_at`, `created_at`) VALUES
 	(1, 100, 'Chief Executive Officer', '#d60000', '2021-07-21 10:15:46', '2021-07-21 10:15:46'),
 	(2, 100, 'Chief Operating Officer', '#ff0202', '2021-07-21 10:16:04', '2021-07-21 10:16:04'),
 	(3, 90, 'General Manager', '#8900c5', '2021-07-21 10:16:18', '2021-07-21 10:16:17'),
@@ -450,7 +451,7 @@ CREATE TABLE IF NOT EXISTS `tokens` (
 -- Exportiere Daten aus Tabelle dijk_vtc.tokens: ~1 rows (ungefähr)
 /*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
 INSERT INTO `tokens` (`id`, `token`, `used`, `used_by`, `used_at`, `created_at`) VALUES
-	(1, '36537775963289104248', 1, 'Eronax', '2021-07-21 10:24:27', '2021-07-21 10:23:50');
+	(1, '91169051596274886634', 1, 'Eronax', '2021-07-22 08:29:39', '2021-07-22 08:28:52');
 /*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
 
 -- Exportiere Struktur von Tabelle dijk_vtc.trucks
@@ -487,7 +488,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `information_color` varchar(50) NOT NULL DEFAULT '#fffff',
   `information` text NOT NULL DEFAULT 'There is no information yet.',
   `last_online` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `role_update` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`) USING HASH,
@@ -497,8 +499,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Exportiere Daten aus Tabelle dijk_vtc.users: ~0 rows (ungefähr)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `information_color`, `information`, `last_online`, `updated_at`, `created_at`) VALUES
-	(1, 'Eronax', 'admin', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-21 10:28:56', '2021-07-21 10:28:56', '2021-07-21 10:24:27');
+INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `status`, `discord`, `truckersmp`, `user_pb`, `information_color`, `information`, `last_online`, `role_update`, `updated_at`, `created_at`) VALUES
+	(1, 'Eronax', 'admin007', 4, 'Not Verified', 'Eronax#2491', 1316998, 'https://static.truckersmp.com/avatarsN/1316998.1601715917.png', '#fffff', 'There is no information yet.', '2021-07-22 08:29:59', '2021-07-22 08:29:39', '2021-07-22 08:29:39', '2021-07-22 08:29:39');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
