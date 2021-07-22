@@ -2,7 +2,6 @@
 include "$_SERVER[DOCUMENT_ROOT]/app/config.php";
 include "$_SERVER[DOCUMENT_ROOT]/app/database.php";
 
-session_start();
 
 if ($con === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -20,7 +19,7 @@ $balance = mysqli_real_escape_string($con, $_REQUEST['balance']);
 $level = mysqli_real_escape_string($con, $_REQUEST['level']);
 $status = mysqli_real_escape_string($con, $_REQUEST['status']);
 
-$sql_edit_users = "UPDATE users SET password='$password', discord='$discord', status='$status', role_id='$role_id', truckersmp='$truckersmp', information='$information', user_pb='$user_pb', information_color='$information_color' WHERE id='$editeduser'";
+$sql_edit_users = "UPDATE users SET discord='$discord', status='$status', role_id='$role_id', truckersmp='$truckersmp', information='$information', user_pb='$user_pb', information_color='$information_color' WHERE id='$editeduser'";
 if (mysqli_query($con, $sql_edit_users)) {
     // log
     $sql_edit_banks = "UPDATE banks SET balance='$balance' WHERE id='$editeduser'";

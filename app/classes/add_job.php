@@ -1,6 +1,5 @@
 <?php
 include "$_SERVER[DOCUMENT_ROOT]/app/config.php";
-session_start();
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */

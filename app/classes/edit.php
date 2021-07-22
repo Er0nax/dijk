@@ -2,8 +2,6 @@
 include "$_SERVER[DOCUMENT_ROOT]/app/config.php";
 include "$_SERVER[DOCUMENT_ROOT]/app/database.php";
 
-session_start();
-
 if ($con === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }

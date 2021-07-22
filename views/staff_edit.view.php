@@ -22,11 +22,6 @@
       <div class="u-form u-form-1">
         <form action="../app/classes/staff_edit.php?id=<?php echo $all_user_information['id'] ?>" method="POST" class="u-clearfix u-form-spacing-20 u-inner-form" style="padding: 10px" source="custom" name="form">
           <div class="u-form-group u-form-name">
-            <label for="name-3b9a" class="u-label">Password:</label>
-            <input type="password" value="<?php echo $all_user_information['password'] ?>" id="name-3b9a" name="password" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="" <?php if ($get_user_perms_edit['perms'] < 99) { ?> disabled <?php } ?>>
-          </div>
-          <br>
-          <div class="u-form-group u-form-name">
             <label for="name-3b9a" class="u-label">Discord:</label>
             <input type="text" value="<?php echo $all_user_information['discord'] ?>" id="name-3b9a" name="discord" class="u-border-1 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-custom-font u-font-raleway u-input u-input-rectangle u-input-1" required="">
           </div>

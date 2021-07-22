@@ -30,7 +30,7 @@
               <div class="u-container-layout u-container-layout-2">
                 <div class="u-container-style u-custom-color-1 u-expanded-width u-group u-radius-10 u-shape-round u-group-1">
                   <div class="u-container-layout u-container-layout-3">
-                    <h2 class="u-custom-font u-font-raleway u-text u-text-1"><span style="color: <?php echo $get_profile_information['role_color'] ?>" ;><?php echo $get_profile_information['username'] ?>'s Profile</span>
+                    <h2 class="u-custom-font u-font-raleway u-text u-text-1"><span style="color: <?php echo $get_profile_information['role_color'] ?>" ;><?php echo $get_profile_information['username'] ?></span>
 
                       <?php if ($_GET['id'] == $userid) {
                         echo '<button class="button_blue" style="vertical-align:middle" data-href="../public/edit.php"><span>Edit</span></button>';

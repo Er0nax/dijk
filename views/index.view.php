@@ -6,6 +6,7 @@
   <title><?php echo $name; ?> | Home</title>
   <link rel="stylesheet" href="../views/css/nicepage_index.css" media="screen">
   <link rel="stylesheet" href="../views/css/index.css" media="screen">
+  <link rel="icon" href="../views/images/logo.png" type="image/x-icon">
   <script class="u-script" type="text/javascript" src="../views/js/jquery_index.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../views/js/nicepage_index.js" defer=""></script>
 </head>
