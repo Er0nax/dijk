@@ -13,7 +13,7 @@ if ($con === false) {
 // Escape user inputs for security
 $username = mysqli_real_escape_string($con, $_REQUEST['username']);
 $password = mysqli_real_escape_string($con, $_REQUEST['password']);
-$discord = mysqli_real_escape_string($con, $_REQUEST['discord']);
+$discord = $_REQUEST['discord'];
 $truckersmp = mysqli_real_escape_string($con, $_REQUEST['truckersmp']);
 $token = mysqli_real_escape_string($con, $_REQUEST['token']);
 

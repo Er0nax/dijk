@@ -35,8 +35,8 @@
           <div class="u-form-group u-form-select u-form-group-2">
             <label for="select-ce55" class="u-form-control-hidden u-label"></label>
             <div class="u-form-select-wrapper">
-              <select style="background-color: #2C4A5C;" id="select-ce55" name="role_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required>
-              <option value="">Please choose a Role</option>
+              <select <?php if($get_user_perms_edit["perms"] < 79) { echo "disabled"; } ?> style="background-color: #2C4A5C;" id="select-ce55" name="role_id" class="u-border-1 u-border-custom-color-1 u-border-no-left u-border-no-right u-border-no-top u-custom-font u-font-raleway u-input u-input-rectangle u-input-2" required>
+              <option value="<?php echo $all_user_information['role_id'] ?>"><?php echo $all_user_information['role_name'] ?></option>
                 <?php while ($role = $list_all_roles->fetch_assoc()) : ?>
                   <option value="<?php echo $role['id'] ?>"><?php echo $role['name'] ?></option>
                 <?php endwhile; ?>
